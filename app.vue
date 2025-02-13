@@ -24,7 +24,7 @@
 .backround {
   width: 100%;
   height: 8647px;
-  background-image: url(back1920.svg);
+  background-image: url(public/back1920.svg);
   background-position: center; /* Фиксирует изображение по центру */
   background-size: cover; /* Масштабирует изображение так, чтобы оно покрывало всю область, обрезая лишнее */
   background-repeat: no-repeat; /* Запрещает повторение изображения */
@@ -59,7 +59,7 @@ ul li {
   .backround {
     width: 100%;
     height: 5695px;
-    background-image: url(back768.svg);
+    background-image: url(public/back768.svg);
     background-position: center; /* Фиксирует изображение по центру */
     background-size: cover; /* Масштабирует изображение так, чтобы оно покрывало всю область, обрезая лишнее */
     background-repeat: no-repeat; /* Запрещает повторение изображения */
@@ -86,7 +86,10 @@ ul li {
   .backround {
     width: 100%;
     height: 5695px;
-    background-image: url(back768.svg);
+    background-image: url(public/back768.svg);
+    background-position: center; /* Фиксирует изображение по центру */
+    background-size: cover; /* Масштабирует изображение так, чтобы оно покрывало всю область, обрезая лишнее */
+    background-repeat: no-repeat; /* Запрещает повторение изображения */
   }
 }
 </style>
