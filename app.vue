@@ -32,15 +32,96 @@
             </div>
             <div style="float: left;">
               <div class="menu">
-                <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+                <input type="checkbox" id="burger-checkbox" @change="toggleScroll" class="burger-checkbox">
                 <label for="burger-checkbox" class="burger">
                   <span></span>
                 </label>
                 <ul class="menu-list">
-                  <li><a href="" class="menu-item">Главная</a></li>
-                  <li><a href="" class="menu-item">О нас</a></li>
-                  <li><a href="" class="menu-item">Команда</a></li>
-                  <li><a href="" class="menu-item">Контакты</a></li>
+                  <li style="height:107px; margin-bottom: 32px;">
+                    <button class="login-berger-btn"><p class="login-berger-btn-txt">Login</p></button>
+                  </li>
+                  <li style="height: 52px;">
+                    <button class="burger-btn">
+                      <ul class="burger-list">
+                        <li>
+                          <p class="burger-btn-txt">Product</p>
+                        </li>
+                        <li>
+                          <img class="arrow-img" src="public/arrow.svg" alt="">
+                        </li>
+                      </ul>
+                    </button>
+                  </li>
+                  <li style="height: 52px; margin-top: 12px;">
+                    <button class="burger-btn">
+                      <ul class="burger-list">
+                        <li>
+                          <p class="burger-btn-txt">Use cases</p>
+                        </li>
+                        <li>
+                          <img class="arrow-img" src="public/arrow.svg" alt="">
+                        </li>
+                      </ul>
+                    </button>
+                  </li>
+                  <li style="height: 52px; margin-top: 12px;">
+                    <button class="burger-btn">
+                      <ul class="burger-list">
+                        <li>
+                          <p class="burger-btn-txt">Learn</p>
+                        </li>
+                        <li>
+                          <img class="arrow-img" src="public/arrow.svg" alt="">
+                        </li>
+                      </ul>
+                    </button>
+                  </li>
+                  <li style="height: 52px; margin-top: 12px;">
+                    <button class="burger-btn">
+                      <ul class="burger-list">
+                        <li>
+                          <p class="burger-btn-txt">About</p>
+                        </li>
+                        <li>
+                          <img class="arrow-img" src="public/arrow.svg" alt="">
+                        </li>
+                      </ul>
+                    </button>
+                  </li>
+                  <li style="height: 52px; margin-top: 12px;">
+                    <button class="burger-btn">
+                      <ul class="burger-list">
+                        <li>
+                          <p class="burger-btn-txt">Jobs</p>
+                        </li>
+                        <li>
+                          <img class="arrow-img" src="public/arrow.svg" alt="">
+                        </li>
+                      </ul>
+                    </button>
+                  </li>
+                  <ul class="sockial-network-list">
+                    <li>
+                      <button class="twitter">
+                        <img class="sockial-network" src="public/twitter.svg">
+                      </button>
+                    </li>
+                    <li>
+                      <button class="telegram">
+                        <img class="sockial-network" src="public/telegram.svg">
+                      </button>
+                    </li>
+                    <li>
+                      <button class="youtube">
+                        <img class="sockial-network" src="public/youtube.svg">
+                      </button>
+                    </li>
+                    <li>
+                      <button class="discord">
+                        <img class="sockial-network" src="public/discord.svg">
+                      </button>
+                    </li>
+                  </ul>
                 </ul>
               </div>
             </div>
@@ -52,6 +133,21 @@
 </template>
 
 <script>
+export default {
+  data() {
+    return {
+
+    }
+  },
+    computed: {
+
+    },
+    methods: {
+      toggleScroll() {
+        document.body.classList.toggle('no-scroll');
+      }
+    },
+}
 </script>
 
 <style>
@@ -220,6 +316,8 @@ button {
     width: 140px;
     height: 23.24px;
     margin: 0px 0px 0px 0px;
+    position: relative;
+    z-index: 1;
   }
 
   ul li {
@@ -296,6 +394,7 @@ button {
     background: transparent;
     width: 17px;
     height: 17px;
+    margin: 3px 0px 0px 168px;
   }
   .burger::before,
   .burger::after,
@@ -335,34 +434,126 @@ button {
     top: 0;
     left: 0;
     position: absolute;
-    display: grid;
-    gap: 12px;
+    display: flex;
     padding: 42px 0;
     margin: 0;
-    background: orange;
+    background: rgb(18, 30, 40);;
     list-style-type: none;
     transform: translateX(-100%);
     transition: .3s;
     width: 100%;
     height: 100%;
+    justify-items: center;
+    flex-direction: column;
+    align-items: center;
   }
-  .menu-item {
-    display: block;
-    padding: 8px;
-    color: white;
-    font-size: 18px;
-    text-align: center;
-    text-decoration: none;
-  }
-  .menu-item:hover {
-    background: rgba(255,255,255,.2)
-  }
+
   .burger-checkbox:checked ~ .menu-list {
     transform: translateX(0);
   }
 
   .show-burger {
     display: flex;
+  }
+
+  .login-berger-btn {
+    border-radius: 10px;
+    width: 320px;
+    height: 52px;
+    background: rgba(255, 200, 3, 0.2);
+    display: block;
+    padding: 0;
+    margin: 55px 0px 0px 0px;
+
+  }
+
+  .login-berger-btn-txt {
+    color: rgb(255, 200, 3);
+    font-family: 'Montserrat';
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin: 0px 0px 0px 20px;
+    height: 32px;
+  }
+
+  .burger-btn {
+    border-radius: 10px;
+    width: 320px;
+    height: 52px;
+    background: rgb(24, 38, 50);
+    padding: 0px;
+  }
+
+  .burger-btn-txt {
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat';
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin: 0px 0px 0px 20px;
+    height: 16px;
+    width: 266px;
+  }
+
+  .arrow-img {
+    height: 18px;
+    width: 18px;
+  }
+
+  .burger-list { 
+    height: 18px;
+    display: flex;
+    padding: 0px;
+  }
+
+  .sockial-network {
+    height: 28px;
+    width: 28px;
+  }
+
+  .twitter {
+    border-radius: 100px;
+    background: rgba(119, 230, 255, 0.15);
+    width: 56px;
+    height: 56px;
+  }
+
+  .telegram {
+    border-radius: 100px;
+    background: rgba(119, 149, 255, 0.15);
+    width: 56px;
+    height: 56px;
+  }
+
+  .youtube {
+    border-radius: 100px;
+    background: rgba(247, 135, 135, 0.15);
+    width: 56px;
+    height: 56px;
+  }
+
+  .discord {
+    border-radius: 100px;
+    background: rgba(146, 119, 255, 0.15);
+    width: 56px;
+    height: 56px;
+  }
+
+  .sockial-network-list {
+    height: 56px;
+    padding: 0px;
+    display: flex;
+    gap: 28px;
+    align-items: flex-end;
+  }
+
+  .no-scroll {
+    overflow: hidden;
   }
 }
 </style>
