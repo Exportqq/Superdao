@@ -127,6 +127,32 @@
             </div>
           </div>
         </div>
+        <div class="header-slogan-navigation">
+            <table>
+              <tr>
+                <td>
+                  <p class="header-txt-slogan">The easiest way to start a DAO</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="header-txt-slogan-comment">An all-in-one platform to start, manage and grow a decentralized autonomous organization</p>
+                </td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">
+                  <button class="start">Get started</button>
+                </td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">
+                  <img class="swop" src="public/swop.svg">
+                </td>
+              </tr>
+            </table>
+
+              
+        </div>
       </div>
     </div>
   </div>
@@ -224,8 +250,79 @@ button {
 }
 
 .show-burger {
-    display: none;
+  display: none;
+}
+
+.header-txt-slogan {
+  color: rgb(255, 255, 255);
+  font-family: 'Russo One';
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 82px;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 200px 0px 0px 0px;
+  width: 642px;
+  height: 164px;
+}
+
+.header-slogan-navigation {
+  display: flex;
+  height: 210px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-txt-slogan-comment {
+  color: rgb(255, 255, 255);
+  font-family: 'Montserrat';
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 46px;
+  letter-spacing: 0px;
+  text-align: center;
+  width: 650px;
+  height: 92px;
+  margin: 32px 0px 0px 0px;
+}
+
+.start {
+  width: 214px;
+  height: 68px;
+  border-radius: 16px;
+  box-shadow: 0px 9px 44px 0px rgba(255, 207, 1, 0.2);
+  background: rgb(255, 207, 1);
+  color: rgb(16, 21, 26);
+  font-family: 'Montserrat';
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0px;
+  text-align: center;
+  margin: 56px 0px 0px 0px;
+}
+
+.a {
+  display: flex;
+}
+
+.swop {
+  height: 21px;
+  width: 21px;
+  margin: 120px 0px 0px 0px;
+  animation: scrollDown 2s infinite alternate ease-in-out;
+}
+
+@keyframes scrollDown {
+  0% {
+    transform: translateY(0);
+    opacity: 0.2; /* Start with slightly lower opacity */
   }
+  100% {
+    transform: translateY(10px); /* Move down slightly */
+    opacity: 1; /* Full opacity at the end */
+  }
+}
 @media (min-width: 769px) and (max-width: 1200px) {
   * {
     margin: 0px;
@@ -303,6 +400,77 @@ button {
   
   .show-burger {
     display: none;
+  }
+
+  .header-txt-slogan {
+    color: rgb(255, 255, 255);
+    font-family: 'Russo One';
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: 0px;
+    text-align: center;
+    margin: 120px 0px 0px 0px;
+    width: 454px;
+    height: 120px;  
+  }
+
+  .header-slogan-navigation {
+    display: flex;
+    height: 210px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-txt-slogan-comment {
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 34px;
+    letter-spacing: 0px;
+    text-align: center;
+    width: 500px;
+    height: 68px;
+    margin: 20px 0px 0px 0px;
+  }
+
+  .start {
+    width: 176px;
+    height: 56px;
+    border-radius: 12px;
+    box-shadow: 0px 7px 36px 0px rgba(255, 207, 1, 0.2);
+    background: rgb(255, 207, 1);
+    color: rgb(16, 21, 26);
+    font-family: 'Montserrat';
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0px;
+    text-align: center;
+    margin: 44px 0px 0px 0px;
+  }
+
+  .a {
+    display: flex;
+  }
+
+  .swop {
+    height: 17px;
+    width: 17px;
+    margin: 64px 0px 0px 0px;
+    animation: scrollDown 2s infinite alternate ease-in-out;
+  }
+
+  @keyframes scrollDown {
+    0% {
+      transform: translateY(0);
+      opacity: 0.2; /* Start with slightly lower opacity */
+    }
+    100% {
+      transform: translateY(10px); /* Move down slightly */
+      opacity: 1; /* Full opacity at the end */
+    }
   }
 }
 
@@ -521,6 +689,9 @@ button {
     background: rgba(119, 230, 255, 0.15);
     width: 56px;
     height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .telegram {
@@ -528,6 +699,9 @@ button {
     background: rgba(119, 149, 255, 0.15);
     width: 56px;
     height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .youtube {
@@ -535,6 +709,9 @@ button {
     background: rgba(247, 135, 135, 0.15);
     width: 56px;
     height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .discord {
@@ -542,6 +719,9 @@ button {
     background: rgba(146, 119, 255, 0.15);
     width: 56px;
     height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .sockial-network-list {
@@ -554,6 +734,78 @@ button {
 
   .no-scroll {
     overflow: hidden;
+  }
+
+  .header-txt-slogan {
+    color: rgb(255, 255, 255);
+    font-family: 'Russo One';
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0px;
+    text-align: center;
+    margin: 110px 0px 0px 0px;
+    width: 314px;
+    height: 88px; 
+  }
+
+  .header-slogan-navigation {
+    display: flex;
+    height: 210px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-txt-slogan-comment {
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: center;
+    width: 314px;
+    height: 84px;
+    margin: 16px 0px 0px 0px;
+  }
+
+  .start {
+    width: 145px;
+    height: 46px;
+    border-radius: 12px;
+    box-shadow: 0px 7px 36px 0px rgba(255, 207, 1, 0.2);
+    background: rgb(255, 207, 1);
+    color: rgb(16, 21, 26);
+    font-family: 'Montserrat';
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0px;
+    text-align: center;
+    margin: 40px 0px 0px 0px;
+  }
+
+  .a {
+    display: flex;
+  }
+
+  .swop {
+    height: 21px;
+    width: 21px;
+    margin: 120px 0px 0px 0px;
+    display: none;
+    animation: scrollDown 2s infinite alternate ease-in-out;
+  }
+
+  @keyframes scrollDown {
+    0% {
+      transform: translateY(0);
+      opacity: 0.2; /* Start with slightly lower opacity */
+    }
+    100% {
+      transform: translateY(10px); /* Move down slightly */
+      opacity: 1; /* Full opacity at the end */
+    }
   }
 }
 </style>
