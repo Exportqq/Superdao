@@ -156,8 +156,60 @@
       </div>
 
 
-      <div class="coontainer">
-
+      <div class="container">
+        <div class="cont-nav">
+          <ul style="padding: 0px;">
+            <li>
+              <img class="star-img" src="public/star.svg"> 
+            </li>
+            <li>
+              <p class="container-txt">Ready for every project</p>
+              <p class="container-txt-xs">Ready<br>for every project</p>
+            </li>
+          </ul>
+        </div>  
+        <div style="height: auto;" class="navigation-daos">
+          <ul class="container-list">
+            <li>
+              <button class="container-btn">Investment DAO</button>
+            </li>
+            <li>
+              <button style="color: #FFC24C;" class="container-btn">Startup DAO</button>
+            </li>
+            <li class="small-phone-block-none">
+              <button style="color: #D387F7;" class="container-btn">Service DAO</button>
+            </li>
+            <li class="small-phone-block-none">
+              <button style="color: #77E6FF;" class="container-btn">Community DAO</button>
+            </li>
+          </ul>
+        </div>
+        <div style="height: auto;">
+          <ul class="small-phone-block">
+            <li>
+              <button style="color: #D387F7;" class="container-btn">Service DAO</button>
+            </li>
+            <li>
+              <button style="color: #77E6FF;" class="container-btn">Community DAO</button>
+            </li>
+          </ul>
+        </div>
+        <div class="navigation-daos-two" style="height: auto;">
+          <ul class="container-list">
+            <li>
+              <button style="color: #23C9DE;" class="container-btn">Investment DAO</button>
+            </li>
+            <li>
+              <button style="color: #FF9E9E;" class="container-btn">Startup DAO</button>
+            </li>
+            <li>
+              <button style="color: #707F8D;" class="container-btn">
+                <img  class="small-star-img" src="public/StarSmall.svg">
+                <p class="small-star-txt">More</p>
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -205,11 +257,16 @@ export default {
 ul li {
   float: left;
   list-style: none;
+  height: auto;
 }
 
 button {
   background: none;
   border: none;
+}
+
+.header {
+  height: 660px;
 }
 
 .header-txt {
@@ -318,6 +375,92 @@ button {
   animation: scrollDown 2s infinite alternate ease-in-out;
 }
 
+.container {
+  display: flex;
+  margin: 240px 0px 0px 0px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.star-img {
+  width: 89px;
+  height: 89px;
+}
+
+.container-txt {
+  color: rgb(229, 229, 229);
+  font-family: 'Russo One';
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 80px;
+  letter-spacing: 0px;
+  text-align: center;
+  height: 80px;
+  margin: 12px 0px 0px 95px;
+}
+
+.cont-nav {
+  width: 1140px;
+  height: auto;
+  padding: 0px 0px 0px 65px;
+}
+
+.container-btn {
+  border-radius: 100px;
+  background: rgb(24, 38, 50);
+  width: auto;
+  height: 56px;
+  gap: 8;
+  padding: 8px 26px 8px 26px;
+  color: rgb(255, 180, 211);
+  font-family: 'Montserrat';
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: 0px;
+  text-align: center;
+  display: flex;
+}
+
+.container-list {
+  display: flex;
+  gap: 24px;
+  height: auto;
+}
+
+.small-star-img {
+  height: 16px;
+  width: 16px;
+  margin: 12px 8px 0px 0px;
+}
+
+.navigation-daos {
+  margin: 44px 0px 24px 0px;
+}
+
+.small-star-txt {
+  height: 40px;
+}
+
+.small-phone-block {
+  display: none;
+}
+.small-phone-block-none {
+  display: block;
+}
+.container-txt-xs {
+  color: rgb(255, 255, 255);
+  font-family: 'Russo One';
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 36px;
+  width: 239px;
+  letter-spacing: 0px;
+  text-align: center;
+  height: 43px;
+  margin: 0px 0px 0px 0px;
+  display: none;
+  }
 @keyframes scrollDown {
   0% {
     transform: translateY(0);
@@ -477,6 +620,93 @@ button {
       opacity: 1; /* Full opacity at the end */
     }
   }
+
+  .container {
+    display: flex;
+    margin: 30px 0px 0px 0px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .star-img {
+    width: 61px; 
+    height: 61px;
+  }
+
+  .container-txt {
+    color: rgb(255, 255, 255);
+    font-family: 'Russo One';
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 43px;
+    letter-spacing: 0px;
+    text-align: center;
+    height: 43px;
+    margin: 26px 0px 0px 46px;
+  }
+
+  .cont-nav {
+    width: 736px;
+    height: auto;
+    padding: 0px 0px 0px 65px;
+  }
+
+  .container-btn {
+    border-radius: 100px;
+    background: rgb(24, 38, 50);
+    width: auto;
+    height: 48px;
+    gap: 12;
+    padding: 8px 24px 8px 24px;
+    color: rgb(255, 180, 211);
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+
+  .container-list {
+    display: flex;
+    gap: 20px;
+    height: auto;
+  }
+
+  .small-star-img {
+    height: 14px;
+    width: 14px;
+    margin: 0px 8px 0px 0px;
+  }
+
+  .navigation-daos {
+    margin: 46px 0px 20px 0px;
+  }
+
+  .small-star-txt {
+    height: 31px;
+  }
+  .small-phone-block {
+    display: none;
+  }
+  .small-phone-block-none {
+    display: block;
+  }
+  .container-txt-xs {
+    color: rgb(255, 255, 255);
+    font-family: 'Russo One';
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 36px;
+    width: 239px;
+    letter-spacing: 0px;
+    text-align: center;
+    height: 43px;
+    margin: 0px 0px 0px 0px;
+    display: none;
+  }
 }
 
 @media (min-width: 360px) and (max-width: 768px) {
@@ -496,6 +726,10 @@ button {
   ul li {
     float: left;
     list-style: none;
+  }
+
+  .header {
+    height: 475px;
   }
 
   .backround {
@@ -735,10 +969,15 @@ button {
     display: flex;
     gap: 28px;
     align-items: flex-end;
+    margin: 120px 0px 0px 0px;
   }
 
   .no-scroll {
     overflow: hidden;
+  }
+
+  .no-scroll .star-img {
+    display: none;
   }
 
   .header-txt-slogan {
@@ -811,6 +1050,109 @@ button {
       transform: translateY(10px); /* Move down slightly */
       opacity: 1; /* Full opacity at the end */
     }
+  }
+
+  .container {
+    display: flex;
+    margin: 30px 0px 0px 0px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .star-img {
+    width: 38px; 
+    height: 38px;
+    position: absolute;
+    transform: translateY(-23px);
+  }
+
+  .container-txt {
+    color: rgb(255, 255, 255);
+    font-family: 'Russo One';
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 36px;
+    width: 239px;
+    letter-spacing: 0px;
+    text-align: center;
+    height: 43px;
+    margin: 0px 0px 0px 0px;
+    display: none;
+  }
+
+  .container-txt-xs {
+    color: rgb(255, 255, 255);
+    font-family: 'Russo One';
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 36px;
+    width: 239px;
+    letter-spacing: 0px;
+    text-align: center;
+    height: 72px;
+    margin: 0px 0px 0px 0px;
+    display: block;
+  }
+  
+  .cont-nav {
+    width: auto;
+    height: auto;
+    padding: 0px 0px 0px 0px;
+  }
+
+  .container-btn {
+    border-radius: 45px;
+    background: rgb(24, 38, 50);
+    width: auto;  
+    height: 40px;
+    gap: 12;
+    padding: 12px 14px 12px 14px;
+    color: rgb(255, 180, 211);
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+  
+
+  .container-list {
+    display: flex;
+    gap: 12px;
+    height: auto;
+    padding: 0px;
+  }
+
+  .small-star-img {
+    height: 10px;
+    width: 10px;
+    margin: 0px 8px 0px 0px;
+  }
+
+  .navigation-daos {
+    margin: 24px 0px 12px 0px;
+  }
+
+  .navigation-daos-two {
+    margin: 12px 0px 0px 0px;
+  }
+
+  .small-star-txt {
+    height: 16px;
+  }
+
+  .small-phone-block {
+    display: flex;
+    gap: 12px;
+    height: auto;
+    padding: 0px;
+  }
+  .small-phone-block-none {
+    display: none;
+    height: auto;
   }
 }
 </style>
