@@ -750,7 +750,7 @@ button {
     letter-spacing: 0px;
     text-align: center;
     margin: 110px 0px 0px 0px;
-    width: 314px;
+    width: 334px;
     height: 88px; 
   }
 
