@@ -217,6 +217,33 @@
           </div>
         </div>
       </div>
+
+      <div class="container-middle">
+        <div class="container-middle-txt">
+          <p>Designed for the full journey</p>
+        </div>
+        <div class="container-middle-star-img-navigation">
+          <img class="container-middle-star-img" src="public/star_middle.svg">
+        </div> 
+        <div class="container-middle-setting">
+          <div>
+            <p class="cont-middle-txt">Designed</p>
+            <img class="container-middle-star-img" src="public/star_middle.svg">
+          </div>
+          <div>
+            <p class="container-middle-txt-two">for the full journey</p>
+          </div>
+        </div>
+      </div>
+      <div class="container-middle-imformation">
+        <p class="middle-imformation-txt">Organisation design</p>
+        <p class="middle-imformation-txt">Smart contract development</p>
+        <p class="middle-imformation-txt">Fundraising</p>
+        <p class="middle-imformation-txt">Launch marketing</p>
+        <p class="middle-imformation-txt">Member onboarding</p>
+        <p class="middle-imformation-txt">Contributor management</p>
+        <p class="middle-imformation-txt">DAO operations</p>
+      </div>
     </div>
   </div>
 </template>
@@ -382,6 +409,7 @@ button {
 }
 
 .container {
+  height: auto;
   display: flex;
   margin: 240px 0px 0px 0px;
   flex-direction: column;
@@ -511,6 +539,75 @@ button {
   justify-content: center;
 }
 
+.container-middle {
+  margin: 183px 0px 0px 0px;
+  display: flex;
+  justify-content: center;
+  height: auto;
+}
+
+.container-middle-txt {
+  color: rgb(229, 229, 229);
+  width: auto;
+  height: 80px;
+  font-family: 'Russo One';
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 80px;
+  letter-spacing: 0px;
+  text-align: center;
+  float: left;
+  margin: 27px 36px 0px 72px;
+}
+
+.container-middle-star-img {
+  width: 76.17px;
+  height: 57px;
+}
+
+.container-middle-star-img-navigation {
+  float: left;
+}
+
+.container-middle-setting {
+  display: none;
+}
+
+.container-middle-imformation {
+  gap: 20px;
+  display: grid;
+  justify-content: center;
+}
+
+.middle-imformation-txt {
+  color: rgb(55, 66, 77);
+  font-family: 'Montserrat';
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 64px;
+  letter-spacing: 0px;
+  text-align: center;
+  height: 64px;
+  animation: highlight 14s infinite;
+  transition: color 0.3s ease;
+}
+
+.middle-imformation-txt:nth-child(1) { animation-delay: 0s; }
+.middle-imformation-txt:nth-child(2) { animation-delay: -12s; }
+.middle-imformation-txt:nth-child(3) { animation-delay: -10s; }
+.middle-imformation-txt:nth-child(4) { animation-delay: -8s; }
+.middle-imformation-txt:nth-child(5) { animation-delay: -6s; }
+.middle-imformation-txt:nth-child(6) { animation-delay: -4s; }
+.middle-imformation-txt:nth-child(7) { animation-delay: -2s; }
+
+@keyframes highlight {
+  0%, 100% {
+    color: rgb(55, 66, 77);
+  }
+  10%, 14.3% {
+    color: rgb(35, 201, 222);
+  }
+}
 @media (min-width: 769px) and (max-width: 1260px) {
   * {
     margin: 0px;
@@ -778,6 +875,38 @@ button {
     height: 336px;
     display: flex;
     justify-content: center;
+  }
+  .container-middle {
+    margin: 110px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .container-middle-txt {
+    color: rgb(255, 255, 255);
+    font-family: 'Russo One';
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 43px;
+    letter-spacing: 0px;
+    text-align: center;
+    height: 43px;
+    width: auto;
+    float: left;
+    margin: 23px 27px 0px 54px;
+  }
+
+  .container-middle-star-img {
+    width: 50px;
+    height: 37px;
+  }
+
+  .container-middle-star-img-navigation {
+    float: left;
+  }
+
+  .container-middle-setting {
+    display: none;
   }
 }
 
@@ -1260,6 +1389,60 @@ button {
     height: 342px;
     display: flex;
     justify-content: center;
+  }
+
+  .container-middle {
+    margin: 85px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .container-middle-txt {
+    display: none;
+  }
+
+  .cont-middle-txt {
+    color: rgb(255, 255, 255);
+    font-family: 'Russo One';
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0px;
+    text-align: center;
+    width: auto;
+    height: 40px;
+    float: left;
+    margin: 15px 20px 0px 40px;
+  }
+
+  .container-middle-txt-two {
+    color: rgb(255, 255, 255);
+    font-family: 'Russo One';
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0px;
+    text-align: center;
+    width: auto;
+    height: 40px;
+    float: left;
+    margin: 6px 0px 0px 0px;
+  }
+
+  .container-middle-star-img {
+    width: 29px;
+    height: 21.7px;
+  }
+
+  .container-middle-star-img-navigation {
+    float: left;
+    display: none;
+  }
+
+  .container-middle-setting {
+    height: 87px;
+    display: grid;
+    justify-items: center;
   }
 }
 </style>
