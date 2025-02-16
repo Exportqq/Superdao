@@ -154,6 +154,11 @@
               
         </div>
       </div>
+
+
+      <div class="coontainer">
+
+      </div>
     </div>
   </div>
 </template>
@@ -764,7 +769,7 @@ button {
     line-height: 28px;
     letter-spacing: 0px;
     text-align: center;
-    width: 314px;
+    width: 334px;
     height: 84px;
     margin: 16px 0px 0px 0px;
   }
