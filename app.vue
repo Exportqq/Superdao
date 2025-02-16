@@ -210,6 +210,12 @@
             </li>
           </ul>
         </div>
+        <div class="nfr-block-navigation">
+          <img class="nft-img" src="public/nft.png">
+          <div class="dao-result">
+            <p style="height: auto;">1000+ projects launched on Superdao</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -460,7 +466,7 @@ button {
   height: 43px;
   margin: 0px 0px 0px 0px;
   display: none;
-  }
+}
 @keyframes scrollDown {
   0% {
     transform: translateY(0);
@@ -471,7 +477,41 @@ button {
     opacity: 1; /* Full opacity at the end */
   }
 }
-@media (min-width: 769px) and (max-width: 1200px) {
+
+.nft-img {
+  margin: 44px 0px 0px 0px;
+  width: 1140px;
+  height: 493px;
+  position: absolute;
+}
+
+.dao-result {
+  position: absolute;
+  width: 404px;
+  height: 44px;
+  border: 4px solid rgb(10, 17, 23);
+  border-radius: 100px;
+  background: rgb(255, 168, 0);
+  color: rgb(10, 17, 23);
+  font-family: 'Montserrat';
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: center;
+  margin: 512px 0px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nfr-block-navigation {
+  height: 515px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 769px) and (max-width: 1260px) {
   * {
     margin: 0px;
     height: 0px;
@@ -706,6 +746,38 @@ button {
     height: 43px;
     margin: 0px 0px 0px 0px;
     display: none;
+  }
+  .nft-img {
+    margin: 44px 0px 0px 0px;
+    width: 736px;
+    height: 318px;
+    position: absolute;
+  }
+
+  .dao-result {
+    position: absolute;
+    width: 356px;
+    height: 36px;
+    border: 3px solid rgb(10, 17, 23);
+    border-radius: 100px;
+    background: rgb(255, 168, 0);
+    color: rgb(10, 17, 23);
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: center;
+    margin: 342px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nfr-block-navigation {
+    height: 336px;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -1153,6 +1225,41 @@ button {
   .small-phone-block-none {
     display: none;
     height: auto;
+  }
+  .nft-img {
+    margin: 24px 0px 0px 0px;
+    width: 328px;
+    height: 328px;
+    position: absolute;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 20px;
+  }
+
+  .dao-result {
+    position: absolute;
+    width: 281px;
+    height: 28px;
+    border: 3px solid rgb(10, 17, 23);
+    border-radius: 100px;
+    background: rgb(255, 168, 0);
+    color: rgb(10, 17, 23);
+    font-family: 'Montserrat';
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: center;
+    margin: 336px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nfr-block-navigation {
+    height: 342px;
+    display: flex;
+    justify-content: center;
   }
 }
 </style>
