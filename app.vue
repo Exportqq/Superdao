@@ -244,6 +244,58 @@
         <p class="middle-imformation-txt">Contributor management</p>
         <p class="middle-imformation-txt">DAO operations</p>
       </div>
+
+
+      <div class="container-tools">
+        <div style="float: left; height: auto;">
+          <img class="tools-star" src="public/toolsstar.svg" alt="">
+        </div>
+        <div style="float: left;">
+          <p class="container-tools-txt">All the tools in one app</p>
+        </div>
+      </div>
+      <div>
+        <ul v-if="isPhone" class="tools-list">
+          <div class="tools-list-row">
+            <li v-for="(button, index) in buttons.slice(0, 2)" :key="index">
+              <button
+                @click="toggleButtonColor(index)"
+                :class="['tools-list-btn', { active: button.isActive }]"
+              >
+                {{ button.label }}
+              </button>
+            </li>
+          </div>
+          <div class="tools-list-row">
+            <li v-for="(button, index) in buttons.slice(2)" :key="index + 2">
+              <button
+                @click="toggleButtonColor(index + 2)"
+                :class="['tools-list-btn', { active: button.isActive }]"
+              >
+                {{ button.label }}
+              </button>
+            </li>
+          </div>
+        </ul>
+        <ul v-if="isDesktop" class="tools-list">
+          <li v-for="(button, index) in buttons" :key="index">
+            <button
+              @click="toggleButtonColor(index)"
+              :class="['tools-list-btn', { active: button.isActive }]"
+            >
+              {{ button.label }}
+            </button>
+          </li>
+        </ul> 
+        <div class="demo-img-block">
+          <img v-if="activeButtonLabel === 'NFT membership'" class="demo-img" src="public/public_app.png"> 
+          <img v-if="activeButtonLabel === 'Member directory'" class="demo-img" src="public/public_app.png"> 
+          <img v-if="activeButtonLabel === 'Treasury'" class="demo-img" src="public/public_app.png"> 
+          <img v-if="activeButtonLabel === 'Feed'" class="demo-img" src="public/public_app.png"> 
+          <img v-if="activeButtonLabel === 'Governance'" class="demo-img" src="public/public_app.png"> 
+          <img v-if="activeButtonLabel === 'App store'" class="demo-img" src="public/public_app.png"> 
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -252,17 +304,63 @@
 export default {
   data() {
     return {
-
+      windowWidth: window.innerWidth,
+      buttons: [
+        { label: 'NFT membership', isActive: true },
+        { label: 'Member directory', isActive: false },
+        { label: 'Treasury', isActive: false },
+        { label: 'Feed', isActive: false },
+        { label: 'Governance', isActive: false },
+        { label: 'App store', isActive: false }
+      ]
     }
   },
-    computed: {
-
+  computed: {
+    isPhone() {
+      return this.windowWidth >= 360 && this.windowWidth <= 768;
     },
-    methods: {
-      toggleScroll() {
-        document.body.classList.toggle('no-scroll');
-      }
+    isDesktop() {
+      return this.windowWidth >= 769 && this.windowWidth <= 3000;
     },
+    activeButtonLabel() {
+        const activeButtons = this.buttons.filter(button => button.isActive);
+        if (activeButtons.length > 0) {
+          return activeButtons[0].label;
+        }
+        return null; // Или какое-то значение по умолчанию, например, `null`
+    }
+  },
+  methods: {
+    toggleScroll() {
+      document.body.classList.toggle('no-scroll');
+    },
+    handleResize() {
+      this.windowWidth = window.innerWidth;
+    },
+    toggleButtonColor(index) {
+      // Сначала сбрасываем состояние всех кнопок
+      this.buttons.forEach((button, i) => {
+        button.isActive = (i === index); // Активируем только текущую
+      });
+      console.log(`Button ${index} toggled:`, this.buttons[index].isActive);
+    }
+  },
+  mounted() {
+    window.addEventListener("resize", this.handleResize);
+  },
+  beforeDestroy() {
+    window.removeEventListener("resize", this.handleResize);
+  },
+  watch: {
+    // isButtonActive(newVal) {
+    //   const button = document.getElementById('nftMembershipBtn');
+    //   if (newVal) {
+    //     button.classList.add('active');
+    //   } else {
+    //     button.classList.remove('active');
+    //   }
+    // }
+  }
 }
 </script>
 
@@ -540,7 +638,7 @@ button {
 }
 
 .container-middle {
-  margin: 183px 0px 0px 0px;
+  margin: 183px 0px 44px 0px;
   display: flex;
   justify-content: center;
   height: auto;
@@ -577,6 +675,7 @@ button {
   gap: 20px;
   display: grid;
   justify-content: center;
+  height: auto;
 }
 
 .middle-imformation-txt {
@@ -607,6 +706,79 @@ button {
   10%, 14.3% {
     color: rgb(35, 201, 222);
   }
+}
+
+.container-tools {
+  display: flex;
+  justify-content: center;
+  margin: 174px 0px 0px 0px;
+  height: 122px;
+}
+
+.tools-star {
+  width: 66.96px;
+  height: 53.17px;
+}
+
+.container-tools-txt {
+  color: rgb(229, 229, 229);
+  font-family: 'Russo One';
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 80px;
+  letter-spacing: 0px;
+  text-align: center;
+  height: 80px;
+  width: 639px;
+  margin: 26px 60px 0px 30px;
+}
+
+.tools-list {
+  height: 40px;
+  padding: 0px;
+  display: flex;
+  gap: 40px;
+  justify-items: center;
+  justify-content: center;
+  margin: 0px 0px 0px 0px;
+}
+
+.tools-list-btn {
+  color: rgb(131, 149, 167);
+  font-family: 'Montserrat';
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: 0px;
+  text-align: left;
+  transition: color 0.3s ease;
+}
+
+#nftMembershipBtn {
+  transition: color 0.3s ease;
+}
+
+.tools-list-btn.active {
+  color: #FFC803;
+}
+
+.demo-img {
+  width: 1000px;
+  height: 700px;
+}
+
+.demo-img-block {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin: 46px 0px 0px 0px;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 @media (min-width: 769px) and (max-width: 1260px) {
   * {
@@ -877,7 +1049,7 @@ button {
     justify-content: center;
   }
   .container-middle {
-    margin: 110px 0px 0px 0px;
+    margin: 110px 0px 18px 0px;
     display: flex;
     justify-content: center;
   }
@@ -907,6 +1079,114 @@ button {
 
   .container-middle-setting {
     display: none;
+  }
+  .container-middle-imformation {
+    gap: 0px;
+    display: grid;
+    justify-content: center;
+  }
+
+  .middle-imformation-txt {
+    color: rgb(55, 66, 77);
+    font-family: 'Montserrat';
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 0px;
+    text-align: center;
+    height: 50px;
+    animation: highlight 14s infinite;
+    transition: color 0.3s ease;
+  }
+
+  .middle-imformation-txt:nth-child(1) { animation-delay: 0s; }
+  .middle-imformation-txt:nth-child(2) { animation-delay: -12s; }
+  .middle-imformation-txt:nth-child(3) { animation-delay: -10s; }
+  .middle-imformation-txt:nth-child(4) { animation-delay: -8s; }
+  .middle-imformation-txt:nth-child(5) { animation-delay: -6s; }
+  .middle-imformation-txt:nth-child(6) { animation-delay: -4s; }
+  .middle-imformation-txt:nth-child(7) { animation-delay: -2s; }
+
+  @keyframes highlight {
+    0%, 100% {
+      color: rgb(55, 66, 77);
+    }
+    10%, 14.3% {
+      color: rgb(35, 201, 222);
+    }
+  }
+
+  .tools-list {
+    height: 28px;
+    padding: 0px;
+    display: flex;
+    gap: 27px;
+    justify-items: center;
+    justify-content: center;
+    margin: 32px 0px 0px 0px;
+  }
+
+  .tools-list-btn {
+    color: rgb(131, 149, 167);
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: left;
+    transition: color 0.3s ease;
+  }
+
+  #nftMembershipBtn {
+    transition: color 0.3s ease;
+  }
+
+  .tools-list-btn.active {
+    color: #FFC803;
+  }
+
+  .demo-img {
+    width: 657px;
+    height: 460px;
+  }
+
+  .demo-img-block {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin: 28px 0px 0px 0px;
+  }
+
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity 0.5s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
+
+  .tools-star {
+    width: 40px;
+    height: 31px;
+  }
+
+  .container-tools-txt {
+    color: rgb(255, 255, 255);
+    font-family: 'Russo One';
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 43px;
+    letter-spacing: 0px;
+    text-align: center;
+    width: 426px;
+    height: 43px;
+    margin: 19px 38px 0px 19px;
+  }
+
+  .container-tools {
+    display: flex;
+    justify-content: center;
+    margin: 174px 0px 0px 0px;
+    height: 59px;
   }
 }
 
@@ -1392,7 +1672,7 @@ button {
   }
 
   .container-middle {
-    margin: 85px 0px 0px 0px;
+    margin: 85px 0px 24px 0px;
     display: flex;
     justify-content: center;
   }
@@ -1443,6 +1723,123 @@ button {
     height: 87px;
     display: grid;
     justify-items: center;
+  }
+  .container-middle-imformation {
+    gap: 0px;
+    display: grid;
+    justify-content: center;
+  }
+
+  .middle-imformation-txt {
+    color: rgb(55, 66, 77);
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0px;
+    text-align: center;
+    height: 36px;
+    animation: highlight 14s infinite;
+    transition: color 0.3s ease;
+  }
+
+  .middle-imformation-txt:nth-child(1) { animation-delay: 0s; }
+  .middle-imformation-txt:nth-child(2) { animation-delay: -12s; }
+  .middle-imformation-txt:nth-child(3) { animation-delay: -10s; }
+  .middle-imformation-txt:nth-child(4) { animation-delay: -8s; }
+  .middle-imformation-txt:nth-child(5) { animation-delay: -6s; }
+  .middle-imformation-txt:nth-child(6) { animation-delay: -4s; }
+  .middle-imformation-txt:nth-child(7) { animation-delay: -2s; }
+
+  @keyframes highlight {
+    0%, 100% {
+      color: rgb(55, 66, 77);
+    }
+    10%, 14.3% {
+      color: rgb(35, 201, 222);
+    }
+  }
+
+  .tools-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем ряды по горизонтали */
+    margin: 32px 0 0 0;
+    gap: 12px;
+  }
+
+  .tools-list-row {
+    display: flex;
+    justify-content: center; /* Центрируем элементы в ряду */
+    gap: 19px; /* Расстояние между кнопками */
+    margin-bottom: 10px; /* Добавляем отступ между рядами */
+  }
+
+  .tools-list-btn {
+    /* Ваши стили для кнопок */
+  }
+
+  .tools-list-btn {
+    color: rgb(131, 149, 167);
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16.22px;
+    letter-spacing: 0px;
+    text-align: center;
+    transition: color 0.3s ease;
+  }
+
+  #nftMembershipBtn {
+    transition: color 0.3s ease;
+  }
+
+  .tools-list-btn.active {
+    color: #FFC803;
+  }
+
+  .demo-img {
+    width: 328px;
+    height: 230px;
+  }
+
+  .demo-img-block {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin: 28px 0px 0px 0px;
+  }
+
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity 0.5s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
+
+  .tools-star {
+    width: 27px;
+    height: 21px;
+  }
+
+  .container-tools-txt {
+    color: rgb(255, 255, 255);
+    font-family: 'Russo One';
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0px;
+    text-align: center;
+    width: 176px;
+    height: 72px;
+    margin: 14px 6px 0px 3px;
+  }
+
+  .container-tools {
+    display: flex;
+    justify-content: center;
+    margin: 174px 0px 0px 0px;
+    height: 75px;
   }
 }
 </style>
