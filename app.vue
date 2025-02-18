@@ -254,7 +254,7 @@
           <p class="container-tools-txt">All the tools in one app</p>
         </div>
       </div>
-      <div>
+      <div class="tools-block">
         <ul v-if="isPhone" class="tools-list">
           <div class="tools-list-row">
             <li v-for="(button, index) in buttons.slice(0, 2)" :key="index">
@@ -295,6 +295,103 @@
           <img v-if="activeButtonLabel === 'Governance'" class="demo-img" src="public/public_app.png"> 
           <img v-if="activeButtonLabel === 'App store'" class="demo-img" src="public/public_app.png"> 
         </div>
+        <div class="video-btn-navigation">
+          <button class="video-btn">
+            <img class="video-img" src="public/video.svg">
+            <p class="video-txt">Watch video</p>
+          </button>
+        </div>
+      </div>
+
+
+
+      <div class="container-works">
+        <div class="works-txt-navigation">
+          <p class="works-txt">Works with</p>
+          <img class="works-star-img" src="public/works_star.svg">
+        </div>
+        <div v-if="isDesktop" class="blockchain-blocks-display">
+          <div class="blockchain-blocks-navigation">
+            <div class="blockchain-blocks">
+              <img class="blockchain-img" src="public/ethereum.svg">
+            </div>
+            <p class="blockchain-txt">Ethereum</p>
+          </div>
+          <div class="blockchain-blocks-navigation">
+            <div class="blockchain-blocks">
+              <img class="blockchain-img" src="public/polygon.svg">
+            </div>
+            <p class="blockchain-txt">Polygon</p>
+          </div>
+          <div class="blockchain-blocks-navigation">
+            <div class="blockchain-blocks">
+              <img class="blockchain-img" src="public/green.svg">
+            </div>
+            <p class="blockchain-txt">Gnosis Safe</p>
+          </div>
+          <div class="blockchain-blocks-navigation">
+            <div class="blockchain-blocks">
+              <img class="blockchain-img" src="public/Snapshot.svg">
+            </div>
+            <p class="blockchain-txt">Snapshot</p>
+          </div>
+          <div class="blockchain-blocks-navigation">
+            <div class="blockchain-blocks">
+              <img class="blockchain-img" src="public/ens.svg">
+            </div>
+            <p class="blockchain-txt">ENS</p>
+          </div>
+          <div class="blockchain-blocks-navigation">
+            <div class="blockchain-blocks">
+              <img class="blockchain-img" src="public/opensea.svg">
+            </div>
+            <p class="blockchain-txt">OpenSea</p>
+          </div>
+        </div>
+
+        <div v-if="isPhone" class="blockchain-blocks-display">
+          <div class="blockchain-blocks-display-navigation">
+            <div class="blockchain-blocks-navigation">
+              <div class="blockchain-blocks">
+                <img class="blockchain-img" src="public/ethereum.svg">
+              </div>
+              <p class="blockchain-txt">Ethereum</p>
+            </div>
+            <div class="blockchain-blocks-navigation">
+              <div class="blockchain-blocks">
+                <img class="blockchain-img" src="public/polygon.svg">
+              </div>
+              <p class="blockchain-txt">Polygon</p>
+            </div>
+            <div class="blockchain-blocks-navigation">
+              <div class="blockchain-blocks">
+                <img class="blockchain-img" src="public/green.svg">
+              </div>
+              <p class="blockchain-txt">Gnosis Safe</p>
+            </div>
+          </div>
+          <div class="blockchain-blocks-display-navigation-first">
+            <div class="blockchain-blocks-navigation">
+              <div class="blockchain-blocks">
+                <img class="blockchain-img" src="public/Snapshot.svg">
+              </div>
+              <p class="blockchain-txt">Snapshot</p>
+            </div>
+            <div class="blockchain-blocks-navigation">
+              <div class="blockchain-blocks">
+                <img class="blockchain-img" src="public/ens.svg">
+              </div>
+              <p class="blockchain-txt">ENS</p>
+            </div>
+            <div class="blockchain-blocks-navigation">
+              <div class="blockchain-blocks">
+                <img class="blockchain-img" src="public/opensea.svg">
+              </div>
+              <p class="blockchain-txt">OpenSea</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -780,6 +877,114 @@ button {
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
+
+.tools-block {
+  height: 900px;
+}
+
+.video-img {
+  width: 32px;
+  height: 32px;
+}
+
+.video-txt {
+  color: rgb(255, 207, 1);
+  font-family: 'Montserrat';
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0px;
+  text-align: left;
+  height: auto;
+  margin: 0px 0px 0px 12px;
+}
+
+.video-btn {
+  width: 280px;
+  height: 68px;
+  border-radius: 16px;
+  background: rgba(255, 207, 1, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 44px 0px 0px 0px;
+}
+
+.video-btn-navigation {
+  display: flex;
+  justify-content: center;
+}
+
+.works-txt {
+  color: rgb(229, 229, 229);
+  font-family: 'Russo One';
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 80px;
+  letter-spacing: 0px;
+  text-align: center;
+  width: 315px;
+  height: 80px;
+  float: left;
+  margin: 9px 32px 0px 64px;
+}
+
+.works-star-img {
+  width: 55px;
+  height: 43px;
+  float: left;
+}
+
+.works-txt-navigation {
+  margin: 190px 0px 0px 0px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.blockchain-blocks {
+  box-sizing: border-box;
+  border: 2px solid rgb(42, 55, 68);
+  border-radius: 40px;
+  background: rgb(18, 30, 40);
+  width: 160px;
+  height: 160px;
+}
+
+.blockchain-img {
+  width: 160px;
+  height: 160px;
+}
+
+.blockchain-txt {
+  color: rgb(229, 229, 229);
+  font-family: 'Montserrat';
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: 0px;
+  text-align: center;
+  height: 40px;
+  margin: 16px 0px 0px 0px;
+}
+
+.blockchain-blocks-navigation {
+  float: left;
+  width: auto;
+  height: auto;
+}
+
+.blockchain-blocks-display {
+  display: flex;
+  gap: 36px;
+  margin: 44px 0px 0px 0px;
+}
+
+.container-works {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 @media (min-width: 769px) and (max-width: 1260px) {
   * {
     margin: 0px;
@@ -1188,6 +1393,115 @@ button {
     margin: 174px 0px 0px 0px;
     height: 59px;
   }
+
+  .tools-block {
+    height: 600px;
+  }
+
+  .video-img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .video-txt {
+    color: rgb(255, 207, 1);
+    font-family: 'Montserrat';
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0px;
+    text-align: left;
+    height: auto;
+    margin: 0px 0px 0px 12px;
+  }
+
+  .video-btn {
+    width: 240px;
+    height: 56px;
+    border-radius: 12px;
+    background: rgba(255, 207, 1, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 32px 0px 0px 0px;
+  }
+
+  .video-btn-navigation {
+    display: flex;
+    justify-content: center;
+  }
+
+  .works-txt {
+    color: rgb(255, 255, 255);
+    font-family: 'Russo One';
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 43px;
+    letter-spacing: 0px;
+    text-align: center;
+    width: 210px;
+    height: 43px;
+    float: left;
+    margin: 10px 23px 0px 46px;
+  }
+
+  .works-star-img {
+    width: 35px;
+    height: 27.36px;
+    float: left;
+  }
+
+  .works-txt-navigation {
+    margin: 100px 0px 0px 0px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .blockchain-blocks {
+    box-sizing: border-box;
+    border: 2px solid rgb(42, 55, 68);
+    border-radius: 24px;
+    background: rgb(18, 30, 40);
+    width: 100px;
+    height: 100px;
+  }
+
+  .blockchain-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .blockchain-txt {
+    color: rgb(229, 229, 229);
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: center;
+    height: 24px;
+    margin: 12px 0px 0px 0px;
+  }
+
+  .blockchain-blocks-navigation {
+    float: left;
+    width: auto;
+    height: auto;
+  }
+
+  .blockchain-blocks-display {
+    display: flex;
+    gap: 27px;
+    margin: 34px 0px 0px 0px;
+  }
+
+  .container-works {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
 }
 
 @media (min-width: 360px) and (max-width: 768px) {
@@ -1838,8 +2152,131 @@ button {
   .container-tools {
     display: flex;
     justify-content: center;
-    margin: 174px 0px 0px 0px;
+    margin: 65px 0px 0px 0px;
     height: 75px;
+  }
+
+  .tools-block {
+    height: 300px;
+  }
+
+  .video-img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .video-txt {
+    color: rgb(255, 207, 1);
+    font-family: 'Montserrat';
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0px;
+    text-align: left;
+    height: auto;
+    margin: 0px 0px 0px 8px;
+  }
+
+  .video-btn {
+    width: 190px;
+    height: 44px;
+    border-radius: 8px;
+    background: rgba(255, 207, 1, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 24px 0px 0px 0px;
+  }
+
+  .video-btn-navigation {
+    display: flex;
+    justify-content: center;
+  }
+
+  .works-txt {
+    color: rgb(255, 255, 255);
+    font-family: 'Russo One';
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0px;
+    text-align: center;
+    width: 163px;
+    height: 36px;
+    float: left;
+    margin: 13px 5px 0px 10px;
+  }
+
+  .works-star-img {
+    width: 26px;
+    height: 20.33px;
+    float: left;
+  }
+
+  .works-txt-navigation {
+    margin: 135px 0px 0px 0px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .blockchain-blocks {
+    box-sizing: border-box;
+    border: 2px solid rgb(42, 55, 68);
+    border-radius: 24px;
+    background: rgb(18, 30, 40);
+    width: 100px;
+    height: 100px;
+  }
+
+  .blockchain-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .blockchain-txt {
+    color: rgb(229, 229, 229);
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: center;
+    height: 24px;
+    margin: 12px 0px 0px 0px;
+  }
+
+  .blockchain-blocks-navigation {
+    float: left;
+    width: auto;
+    height: auto;
+  }
+
+  .blockchain-blocks-display {
+    display: flex;
+    gap: 20px;
+    margin: 24px 0px 0px 0px;
+    flex-direction: column;
+  }
+
+  .container-works {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blockchain-blocks-display-navigation {
+    height: auto;
+    display: flex;
+    gap: 20px;
+    margin: 0px 0px 0px 0px;
+  }
+
+  .blockchain-blocks-display-navigation-first {
+    height: auto;
+    display: flex;
+    gap: 20px;
+    margin: 20px 0px 0px 0px;
   }
 }
 </style>

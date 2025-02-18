@@ -1,0 +1,26 @@
+<svg width="150.000000" height="150.000000" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<filter id="filter_8758_23281_dd" x="0.000000" y="0.000000" width="150.000000" height="150.000000" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+			<feOffset dx="0" dy="0"/>
+			<feGaussianBlur stdDeviation="15.6667"/>
+			<feComposite in2="hardAlpha" operator="out" k2="-1" k3="1"/>
+			<feColorMatrix type="matrix" values="0 0 0 0 0.5098 0 0 0 0 0.27843 0 0 0 0 0.89804 0 0 0 0.3 0"/>
+			<feBlend mode="normal" in2="BackgroundImageFix" result="effect_dropShadow_1"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="effect_dropShadow_1" result="shape"/>
+		</filter>
+		<linearGradient x1="74.999542" y1="47.000000" x2="74.999542" y2="103.100639" id="paint_linear_13_977_0" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#965EF4"/>
+			<stop offset="1.000000" stop-color="#8247E5"/>
+		</linearGradient>
+	</defs>
+	<g filter="url(#filter_8758_23281_dd)">
+		<rect id="Icon_polygon" rx="0.000000" width="55.500000" height="55.500000" transform="translate(47.250000 47.250000)" fill="#FFFFFF" fill-opacity="0"/>
+		<circle id="Polygon (MATIC)" cx="75.000000" cy="75.050323" r="28.050320" fill="url(#paint_linear_13_977_0)" fill-opacity="1.000000"/>
+		<path id="Polygon (MATIC)" d="M83.41 69.41C82.81 69.07 82.04 69.07 81.36 69.41L76.58 72.25L73.33 74.06L68.63 76.89C68.03 77.24 67.26 77.24 66.58 76.89L62.91 74.66C62.31 74.31 61.88 73.63 61.88 72.85L61.88 68.55C61.88 67.86 62.22 67.18 62.91 66.75L66.58 64.6C67.17 64.25 67.94 64.25 68.63 64.6L72.3 66.83C72.9 67.18 73.33 67.86 73.33 68.64L73.33 71.48L76.58 69.58L76.58 66.66C76.58 65.97 76.23 65.28 75.55 64.85L68.71 60.81C68.12 60.47 67.35 60.47 66.66 60.81L59.66 64.94C58.97 65.28 58.63 65.97 58.63 66.66L58.63 74.74C58.63 75.43 58.97 76.12 59.66 76.55L66.58 80.59C67.17 80.94 67.94 80.94 68.63 80.59L73.33 77.84L76.58 75.95L81.28 73.2C81.87 72.85 82.64 72.85 83.33 73.2L87 75.35C87.6 75.69 88.03 76.38 88.03 77.15L88.03 81.45C88.03 82.14 87.68 82.83 87 83.26L83.41 85.41C82.81 85.75 82.04 85.75 81.36 85.41L77.69 83.26C77.09 82.92 76.66 82.23 76.66 81.45L76.66 78.7L73.41 80.59L73.41 83.43C73.41 84.12 73.76 84.81 74.44 85.24L81.36 89.28C81.96 89.62 82.73 89.62 83.41 89.28L90.33 85.24C90.93 84.89 91.36 84.21 91.36 83.43L91.36 75.26C91.36 74.57 91.01 73.88 90.33 73.45L83.41 69.41Z" fill="#10151A" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+</svg>
