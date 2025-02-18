@@ -373,7 +373,7 @@
           <div class="blockchain-blocks-display-navigation-first">
             <div class="blockchain-blocks-navigation">
               <div class="blockchain-blocks">
-                <img class="blockchain-img" src="public/Snapshot.svg">
+                <img class="blockchain-img" src="public/snapshot.svg">
               </div>
               <p class="blockchain-txt">Snapshot</p>
             </div>
