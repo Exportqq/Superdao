@@ -393,6 +393,23 @@
         </div>
 
       </div>
+
+
+      <div class="container-devs">
+        <p class="devs-txt">Help at every step</p>
+      </div>
+      
+      <div class="container-devs-two">
+        <div class="devs-nav-one">
+          <img class="devs-img" src="public/dev1.svg">
+          <img class="devs-img" src="public/dev2.svg">
+        </div>
+        <div class="devs-nav-two">
+          <img class="devs-img" src="public/dev3.svg">
+          <img class="devs-img" src="public/dev4.svg">
+          <img class="devs-img" src="public/dev5.svg">
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -984,6 +1001,54 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 528px;
+}
+
+.devs-img {
+  width: 160px;
+  height: 160px;
+}
+
+.devs-nav-one {
+  height: auto;
+  float: left;
+  display: flex;
+  gap: 25px;
+  margin: 0px 25px 0px 0px;
+}
+
+.devs-nav-two {
+  height: auto;
+  float: left;
+  display: flex;
+  gap: 25px;
+}
+
+.devs-txt {
+  color: rgb(229, 229, 229);
+  font-family: 'Russo One';
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 80px;
+  letter-spacing: 0px;
+  text-align: center;
+  width: 501px;
+  height: 80px;
+}
+
+.container-devs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80px;
+  margin: 200px 0px 0px 0px;
+}
+
+.container-devs-two {
+  height: 160px;
+  margin: 44px 0px 0px 0px;
+  display: flex;
+  justify-content: center;
 }
 @media (min-width: 769px) and (max-width: 1260px) {
   * {
