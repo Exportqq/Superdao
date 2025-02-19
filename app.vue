@@ -410,6 +410,27 @@
           <img class="devs-img" src="public/dev5.svg">
         </div>
       </div>
+
+      <div class="roles-navigation">
+        <div class="devs-roles-block">
+          <div  class="devs-roles-block-navigation">
+            <p class="devs-roles">Success managers</p>
+            <img src="public/blue.svg" class="dev-stars-roles">
+            <p class="devs-roles">Knowledge base</p>
+            <p class="devs-roles">Chat support</p>
+            <img src="public/violet.svg" class="dev-stars-roles">
+            <p class="devs-roles">Tutorials</p>
+            <img src="public/gryellow.svg" class="dev-stars-roles">
+            <p class="devs-roles">Templates</p>
+            <p class="devs-roles">Smart Contract development</p>
+            <img src="public/orange.svg" class="dev-stars-roles">
+            <p class="devs-roles">Events</p>
+            <p class="devs-roles">Education</p>
+            <img src="public/yellow_light.svg" class="dev-stars-roles">
+            <p class="devs-roles">Guides</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -1050,6 +1071,46 @@ button {
   display: flex;
   justify-content: center;
 }
+
+.devs-roles {
+  color: rgb(255, 255, 255);
+  font-family: 'Russo One';
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: 0px;
+  text-align: left;
+  height: 50px;
+  width: auto;
+  float: left;
+}
+
+.dev-stars-roles {
+  width: 30px;
+  height: 30px;
+  float: left;
+}
+
+.devs-roles-block-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+  align-items: center;
+  height: auto;
+  margin: 48px 0px 0px 0px;
+}
+
+.devs-roles-block {
+  height: auto;
+  width: 900px;
+}
+
+.roles-navigation {
+  display: flex;
+  height: auto;
+  justify-content: center;
+}
 @media (min-width: 769px) and (max-width: 1260px) {
   * {
     margin: 0px;
@@ -1565,6 +1626,95 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 325px;
+
+  }
+
+  .devs-img {
+    width: 112px;
+    height: 112px;
+  }
+
+  .devs-nav-one {
+    height: auto;
+    float: left;
+    display: flex;
+    gap: 27px;
+    margin: 0px 27px 0px 0px;
+  }
+
+  .devs-nav-two {
+    height: auto;
+    float: left;
+    display: flex;
+    gap: 27px;
+  }
+
+  .devs-txt {
+    color: rgb(255, 255, 255);
+    font-family: 'Russo One';
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 43px;
+    letter-spacing: 0px;
+    text-align: center;
+    width: 334px;
+    height: 43px;
+  }
+
+  .container-devs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80px;
+    margin: 100px 0px 0px 0px;
+  }
+
+  .container-devs-two {
+    height: 112px;
+    margin: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .devs-roles {
+    color: rgb(255, 255, 255);
+    font-family: 'Russo One';
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0px;
+    text-align: left;
+    height: 40px;
+    width: auto;
+    float: left;
+  }
+
+  .dev-stars-roles {
+    width: 25px;
+    height: 25px;
+    float: left;
+  }
+
+  .devs-roles-block-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    align-items: center;
+    height: auto;
+    margin: 37px 0px 0px 0px;
+  }
+
+  .devs-roles-block {
+    height: auto;
+    width: 738px;
+  }
+
+  .roles-navigation {
+    display: flex;
+    height: auto;
+    justify-content: center;
   }
   
 }
@@ -2343,5 +2493,94 @@ button {
     gap: 20px;
     margin: 20px 0px 0px 0px;
   }
+
+  .devs-img {
+    width: 112px;
+    height: 112px;
+  }
+
+  .devs-nav-one {
+    height: auto;
+    float: left;
+    display: flex;
+    gap: 10px;
+    margin: 33px 10px 10px 0px;
+  }
+
+  .devs-nav-two {
+    height: auto;
+    float: left;
+    display: flex;
+    gap: 10px;
+  }
+
+  .devs-txt {
+    color: rgb(255, 255, 255);
+    font-family: 'Russo One';
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0px;
+    text-align: center;
+    width: 260px;
+    height: 36px;
+  }
+
+  .container-devs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70px;
+    margin: 80px 0px 0px 0px;
+  }
+
+  .container-devs-two {
+    height: 175px;
+    margin: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .devs-roles {
+    color: rgb(255, 255, 255);
+    font-family: 'Russo One';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0px;
+    text-align: left;
+    height: 23px;
+    width: auto;
+    float: left;
+  }
+
+  .dev-stars-roles {
+    width: 13px;
+    height: 13px;
+    float: left;
+  }
+
+  .devs-roles-block-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    height: auto;
+    margin: 73px 0px 0px 0px;
+  }
+
+  .devs-roles-block {
+    height: auto;
+    width: 362px;
+  }
+
+  .roles-navigation {
+    display: flex;
+    height: auto;
+    justify-content: center;
+  } 
 }
 </style>
