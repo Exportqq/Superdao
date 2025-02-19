@@ -391,14 +391,10 @@
             </div>
           </div>
         </div>
-
       </div>
-
-
       <div class="container-devs">
         <p class="devs-txt">Help at every step</p>
       </div>
-      
       <div class="container-devs-two">
         <div class="devs-nav-one">
           <img class="devs-img" src="public/dev1.svg">
@@ -410,7 +406,6 @@
           <img class="devs-img" src="public/dev5.svg">
         </div>
       </div>
-
       <div class="roles-navigation">
         <div class="devs-roles-block">
           <div  class="devs-roles-block-navigation">
@@ -428,6 +423,46 @@
             <p class="devs-roles">Education</p>
             <img src="public/yellow_light.svg" class="dev-stars-roles">
             <p class="devs-roles">Guides</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="form">
+        <div class="form-block">
+          <p class="form-txt">Weekly digest</p>
+          <p class="form-txt-comment">Latest news in DAOs and Web3</p>
+          <div class="form-setting">
+            <input placeholder="Your email" class="form-style">
+            <button class="form-btn">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="sponsors">
+        <div class="sponsors-block">
+          <div class="logos">
+            <div class="logos-slide">
+              <img class="float-left" src="public/digital.svg" />
+              <img class="float-left" src="public/digital.svg" />
+              <img class="float-left" src="public/digital.svg" />
+              <img class="float-left" src="public/digital.svg" />
+              <img class="float-left" src="public/digital.svg" />
+              <img class="float-left" src="public/digital.svg" />
+              <img class="float-left" src="public/digital.svg" />
+              <img class="float-left" src="public/digital.svg" />
+              <img class="float-left" src="public/digital.svg" />
+              <img class="float-left" src="public/digital.svg" />
+              <img class="float-left" src="public/digital.svg" />
+              <img class="float-left" src="public/digital.svg" />
+              <img class="float-left" src="public/digital.svg" />
+              <img class="float-left" src="public/digital.svg" />
+              <img class="float-left" src="public/digital.svg" />
+              <img class="float-left" src="public/digital.svg" />
+              <img class="float-left" src="public/digital.svg" />
+              <img class="float-left" src="public/digital.svg" />
+              <img class="float-left" src="public/digital.svg" />
+              <img class="float-left" src="public/digital.svg" />
+            </div>
           </div>
         </div>
       </div>
@@ -1111,6 +1146,106 @@ button {
   height: auto;
   justify-content: center;
 }
+
+.form {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin: 214px 0px 0px 0px;
+}
+
+.form-block {
+  background-image: url(form.png);
+  width: 1140px;
+  height: 390px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-txt {
+  color: rgb(255, 255, 255);
+  font-family: 'Russo One';
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 80px;
+  letter-spacing: 0px;
+  text-align: left;
+  width: 412px;
+  height: 80px;
+}
+
+.form-txt-comment {
+  color: rgb(154, 175, 196);
+  font-family: 'Montserrat';
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 44px;
+  letter-spacing: 0px;
+  text-align: left;
+  width: 580px;
+  height: 44px;
+  margin: 26px 0px 68px 0px;
+}
+
+.form-style {
+  width: 506px;
+  height: 68px;
+  border: 2px solid rgb(42, 55, 68);
+  border-radius: 16px;
+  background: rgb(18, 30, 40);
+  outline: none;
+  color: rgb(255, 255, 255);
+  font-family: 'Montserrat';
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  padding: 0px 0px 0px 28px;
+}
+
+::placeholder {
+  color: rgb(61, 76, 91);
+}
+
+.form-btn {
+  color: rgb(16, 21, 26);
+  font-family: 'Montserrat';
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: 0px;
+  text-align: center;
+  border-radius: 16px;
+  width: 175px;
+  height: 68px;
+  background: rgb(206, 170, 255);
+  margin: 0px 0px 0px 24px;
+}
+
+.form-setting {
+  display: block;
+  height: auto;
+  width: auto;
+}
+
+.float-left {
+  height: 132px;
+  width: auto;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-140%);
+  }
+}
+
+
 @media (min-width: 769px) and (max-width: 1260px) {
   * {
     margin: 0px;
@@ -1716,7 +1851,91 @@ button {
     height: auto;
     justify-content: center;
   }
+
+  .form {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin: 100px 0px 0px 0px;
+  }
+
+  .form-block {
+    background-image: url(formS.png);
+    width: 736px;
+    height: 293px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .form-txt {
+    color: rgb(255, 255, 255);
+    font-family: 'Russo One';
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 45px;
+    letter-spacing: 0px;
+    text-align: center;
+    width: 258px;
+    height: 43px;
+  }
+
+  .form-txt-comment {
+    color: rgb(154, 175, 196);
+    font-family: 'Montserrat';
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: 0px;
+    text-align: left;
+    width: 451px;
+    height: 40px;
+    margin: 18px 0px 48px 0px;
+  }
+
+  .form-style {
+    width: 324px;
+    height: 60px;
+    border: 2px solid rgb(42, 55, 68);
+    border-radius: 16px;
+    background: rgb(18, 30, 40);
+    outline: none;
+    color: rgb(255, 255, 255);
+    color: rgb(61, 76, 91);
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+    padding: 0px 0px 0px 24px;
+  }
+
+  ::placeholder {
+    color: rgb(61, 76, 91);
+  }
+
+  .form-btn {
+    color: rgb(16, 21, 26);
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: 0px;
+    text-align: center;
+    border-radius: 16px;
+    width: 167px;
+    height: 60px;
+    background: rgb(206, 170, 255);
+    margin: 0px 0px 0px 24px;
+  }
   
+  .form-setting {
+    display: block;
+    height: auto;
+    width: auto;
+  }
 }
 
 @media (min-width: 360px) and (max-width: 768px) {
@@ -2582,5 +2801,94 @@ button {
     height: auto;
     justify-content: center;
   } 
+
+  .form {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin: 80px 0px 0px 0px;
+  }
+
+  .form-block {
+    box-sizing: border-box;
+    border: 1px solid rgb(42, 55, 68);
+    border-radius: 22px;
+    background: rgb(20, 33, 45);
+    width: 328px;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .form-txt {
+    color: rgb(255, 255, 255);
+    font-family: 'Russo One';
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0px;
+    text-align: center;
+    width: 200px;
+    height: 36px;
+  }
+
+  .form-txt-comment {
+    color: rgb(154, 175, 196);
+    font-family: 'Montserrat';
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: center;
+    width: 280px;
+    height: 56px;
+    margin: 8px 0px 24px 0px;
+  }
+
+  .form-style {
+    width: 279px;
+    height: 44px;
+    border: 1px solid rgb(42, 55, 68);
+    border-radius: 10px;
+    background: rgb(18, 30, 40);
+    outline: none;
+    color: rgb(61, 76, 91);
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-align: left;
+    padding: 0px 0px 0px 18px;
+  }
+
+  ::placeholder {
+    color: rgb(61, 76, 91);
+  }
+
+  .form-btn {
+    color: rgb(16, 21, 26);
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: center;
+    border-radius: 10px;
+    background: rgb(226, 193, 249);
+    margin: 16px 0px 0px 0px;
+    width: 280px;
+    height: 44px;
+  }
+
+  .form-setting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    width: auto;
+  }
 }
 </style>
