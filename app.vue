@@ -27,7 +27,7 @@
             </li>
           </ul>
           <div class="show-burger">
-            <div style="float: left;">
+            <div class="show-burder-logos" >
               <img class="logo" src="public/logo.svg">
             </div>
             <div style="float: left;">
@@ -453,7 +453,6 @@
                 :key="index"
                 class="logos-img"
                 :src="logo"
-                alt="logo"
               />
             </div>
           </div>
@@ -467,7 +466,6 @@
                 :key="index"
                 class="logos-img"
                 :src="logo"
-                alt="logo"
               />
             </div>
           </div>
@@ -490,7 +488,22 @@ export default {
         { label: 'Governance', isActive: false },
         { label: 'App store', isActive: false }
       ],
-    
+      logos: [
+        '/alliance.svg',
+        '/digital.svg',
+        '/oneblock.svg',
+        '/fika.svg',
+        '/pear.svg',
+        '/shima.svg',
+      ],
+      logosTwo: [
+        '/great.svg',
+        '/norwest.svg',
+        '/50.svg',
+        '/circle.svg',
+        '/protocol.svg',
+        '/venturesouq.svg',
+      ]
     }
   },
   computed: {
@@ -1363,6 +1376,8 @@ button {
     height: 0px;
   } 
 
+  
+
   .logo {
     width: 140px;
     height: 23.24px;
@@ -2166,6 +2181,11 @@ button {
   * {
     margin: 0px;
     height: 0px;
+  }
+
+  .show-burder-logos {
+    width: 140px;
+    height: 23.24px;
   }
 
   .logo {
