@@ -490,22 +490,7 @@ export default {
         { label: 'Governance', isActive: false },
         { label: 'App store', isActive: false }
       ],
-      logos: [
-        '/alliance.svg',
-        '/digital.svg',
-        '/oneblock.svg',
-        '/fika.svg',
-        '/pear.svg',
-        '/shima.svg',
-      ],
-      logosTwo: [
-        '/great.svg',
-        '/norwest.svg',
-        '/50.svg',
-        '/circle.svg',
-        '/protocol.svg',
-        '/venturesouq.svg',
-      ]
+    
     }
   },
   computed: {
