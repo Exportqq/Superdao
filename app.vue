@@ -444,6 +444,34 @@
           <p class="sponsors-txt">Backed by</p>
           <img class="sponsor-star-img" src="public/sponsor-star.svg">
         </div>
+        <div class="sponsors-block">
+          <div class="logos">
+            <div class="logos-slide">
+              <!-- Используем вычисляемое свойство infiniteLogos для бесконечного списка -->
+              <img
+                v-for="(logo, index) in infiniteLogos"
+                :key="index"
+                class="logos-img"
+                :src="logo"
+                alt="logo"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="sponsors-blockTwo">
+          <div class="logos">
+            <div class="logos-slideTwo">
+              <!-- Используем вычисляемое свойство infiniteLogos для бесконечного списка -->
+              <img
+                v-for="(logo, index) in infiniteLogosTwo"
+                :key="index"
+                class="logos-img"
+                :src="logo"
+                alt="logo"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
