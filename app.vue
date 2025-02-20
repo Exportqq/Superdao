@@ -438,30 +438,37 @@
         </div>
       </div>
       
+
       <div class="sponsors">
+        <div class="sponsors-txt-block">
+          <p class="sponsors-txt">Backed by</p>
+          <img class="sponsor-star-img" src="public/sponsor-star.svg">
+        </div>
         <div class="sponsors-block">
           <div class="logos">
             <div class="logos-slide">
-              <img class="float-left" src="public/digital.svg" />
-              <img class="float-left" src="public/digital.svg" />
-              <img class="float-left" src="public/digital.svg" />
-              <img class="float-left" src="public/digital.svg" />
-              <img class="float-left" src="public/digital.svg" />
-              <img class="float-left" src="public/digital.svg" />
-              <img class="float-left" src="public/digital.svg" />
-              <img class="float-left" src="public/digital.svg" />
-              <img class="float-left" src="public/digital.svg" />
-              <img class="float-left" src="public/digital.svg" />
-              <img class="float-left" src="public/digital.svg" />
-              <img class="float-left" src="public/digital.svg" />
-              <img class="float-left" src="public/digital.svg" />
-              <img class="float-left" src="public/digital.svg" />
-              <img class="float-left" src="public/digital.svg" />
-              <img class="float-left" src="public/digital.svg" />
-              <img class="float-left" src="public/digital.svg" />
-              <img class="float-left" src="public/digital.svg" />
-              <img class="float-left" src="public/digital.svg" />
-              <img class="float-left" src="public/digital.svg" />
+              <!-- Используем вычисляемое свойство infiniteLogos для бесконечного списка -->
+              <img
+                v-for="(logo, index) in infiniteLogos"
+                :key="index"
+                class="logos-img"
+                :src="logo"
+                alt="logo"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="sponsors-blockTwo">
+          <div class="logos">
+            <div class="logos-slideTwo">
+              <!-- Используем вычисляемое свойство infiniteLogos для бесконечного списка -->
+              <img
+                v-for="(logo, index) in infiniteLogosTwo"
+                :key="index"
+                class="logos-img"
+                :src="logo"
+                alt="logo"
+              />
             </div>
           </div>
         </div>
@@ -482,6 +489,22 @@ export default {
         { label: 'Feed', isActive: false },
         { label: 'Governance', isActive: false },
         { label: 'App store', isActive: false }
+      ],
+      logos: [
+        '/alliance.svg',
+        '/digital.svg',
+        '/oneblock.svg',
+        '/fika.svg',
+        '/pear.svg',
+        '/shima.svg',
+      ],
+      logosTwo: [
+        '/great.svg',
+        '/norwest.svg',
+        '/50.svg',
+        '/circle.svg',
+        '/protocol.svg',
+        '/venturesouq.svg',
       ]
     }
   },
@@ -498,7 +521,13 @@ export default {
           return activeButtons[0].label;
         }
         return null; // Или какое-то значение по умолчанию, например, `null`
-    }
+    },
+    infiniteLogos() {
+      return [...this.logos, ...this.logos, ...this.logos, ...this.logos, ...this.logos, ...this.logos, ...this.logos, ...this.logos, ...this.logos, ...this.logos];
+    },
+    infiniteLogosTwo() {
+      return [...this.logosTwo, ...this.logosTwo, ...this.logosTwo, ...this.logosTwo, ...this.logosTwo, ...this.logosTwo, ...this.logosTwo, ...this.logosTwo, ...this.logosTwo, ];
+    },
   },
   methods: {
     toggleScroll() {
@@ -1231,9 +1260,51 @@ button {
   width: auto;
 }
 
-.float-left {
+.logos-img {
   height: 132px;
   width: auto;
+  margin: 0 20px;
+}
+
+
+.sponsors {
+  width: 100%;
+  overflow: hidden;
+  height: auto;
+}
+
+.sponsors-block {
+  width: 100%;
+  height: 132px;
+  overflow: hidden;
+  position: relative;
+  margin: 56px 0px 0px 0px;
+}
+
+.sponsors-blockTwo {
+  width: 100%;
+  height: 132px;
+  overflow: hidden;
+  position: relative;
+  margin: 40px 0px 0px 0px;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: slide 100s linear infinite;
+}
+
+.logos-slideTwo {
+  display: inline-block;
+  animation: slide 105s linear infinite;
+}
+
+.logo {
+  display: inline-block;
+  height: 100%;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 10px; /* Добавлено для небольшого отступа между логотипами */
 }
 
 @keyframes slide {
@@ -1241,11 +1312,66 @@ button {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-140%);
+    transform: translateX(-100%);
   }
 }
 
+.logos {
+  overflow: hidden;
+  height: 212px;
+  background: none;
+  white-space: nowrap;
+  position: relative;
+}
 
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 132px;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(90.00deg, rgb(16, 21, 26),rgba(16, 21, 26, 0) 100%);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(270.00deg, rgb(16, 21, 26) 0%,rgba(16, 21, 26, 0) 100%);;
+}
+
+.sponsors-txt {
+  color: rgb(229, 229, 229);
+  font-family: 'Russo One';
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 80px;
+  letter-spacing: 0px;
+  text-align: center;
+  width: 279px;
+  height: 80px;
+  float: left;
+  margin: 34px 47px 0px 94px;
+}
+
+.sponsors-txt-block {
+  width: auto;
+  height: 114px;
+  display: flex;
+  justify-content: center;
+  margin: 166px 0px 0px 0px;
+  
+}
+
+.sponsor-star-img {
+  width: 65px;
+  height: 50px;
+  float: left;
+}
 @media (min-width: 769px) and (max-width: 1260px) {
   * {
     margin: 0px;
@@ -1935,6 +2061,119 @@ button {
     display: block;
     height: auto;
     width: auto;
+  }
+
+  .logos-img {
+    height: 88px;
+    width: auto;
+    margin: 0 12px;
+  }
+
+
+  .sponsors {
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+  }
+
+  .sponsors-block {
+    width: 100%;
+    height: 88px;
+    overflow: hidden;
+    position: relative;
+    margin: 38px 0px 0px 0px;
+  }
+
+  .sponsors-blockTwo {
+    width: 100%;
+    height: 88px;
+    overflow: hidden;
+    position: relative;
+    margin: 24px 0px 0px 0px;
+  }
+
+  .logos-slide {
+    display: inline-block;
+    animation: slide 100s linear infinite;
+  }
+
+  .logo {
+    display: inline-block;
+    height: 100%;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 10px; /* Добавлено для небольшого отступа между логотипами */
+  }
+
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .logos {
+    overflow: hidden;
+    height: 88px;
+    background: none;
+    white-space: nowrap;
+    position: relative;
+  }
+
+  .logos:before,
+  .logos:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 88px;
+    content: "";
+    z-index: 2;
+  }
+
+  .logos:before {
+    left: 0;
+    background: linear-gradient(90.00deg, rgb(16, 21, 26),rgba(16, 21, 26, 0) 100%);
+  }
+
+  .logos:after {
+    right: 0;
+    background: linear-gradient(270.00deg, rgb(16, 21, 26) 0%,rgba(16, 21, 26, 0) 100%);;
+  }
+
+  .sponsors-txt {
+    color: rgb(255, 255, 255);
+    font-family:'Russo One';
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 43px;
+    letter-spacing: 0px;
+    text-align: center;
+    width: 186px;
+    height: 43px;
+    float: left;
+    margin: 20px 30px 0px 60px;
+  }
+
+  .sponsors-txt-block {
+    width: auto;
+    height: 63px;
+    display: flex;
+    justify-content: center;
+    margin: 79px 0px 0px 0px;
+    
+  }
+
+  .sponsor-star-img {
+    width: 53px;
+    height: 40.77px;
+    float: left;
+  }
+
+  .logos-slideTwo {
+    display: inline-block;
+    animation: slide 105s linear infinite;
   }
 }
 
@@ -2889,6 +3128,119 @@ button {
     align-items: center;
     height: auto;
     width: auto;
+  }
+
+  .logos-img {
+    height: 58px;
+    width: auto;
+    margin: 0 16px;
+  }
+
+
+  .sponsors {
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+  }
+
+  .sponsors-block {
+    width: 100%;
+    height: 58px;
+    overflow: hidden;
+    position: relative;
+    margin: 24px 0px 0px 0px;
+  }
+
+  .sponsors-blockTwo {
+    width: 100%;
+    height: 58px;
+    overflow: hidden;
+    position: relative;
+    margin: 16px 0px 0px 0px;
+  }
+
+  .logos-slide {
+    display: inline-block;
+    animation: slide 100s linear infinite;
+  }
+
+  .logo {
+    display: inline-block;
+    height: 100%;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 10px; /* Добавлено для небольшого отступа между логотипами */
+  }
+
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .logos {
+    overflow: hidden;
+    height: 58px;
+    background: none;
+    white-space: nowrap;
+    position: relative;
+  }
+
+  .logos:before,
+  .logos:after {
+    position: absolute;
+    top: 0;
+    width: 85px;
+    height: 58px;
+    content: "";
+    z-index: 2;
+  }
+
+  .logos:before {
+    left: 0;
+    background: linear-gradient(90.00deg, rgb(16, 21, 26),rgba(16, 21, 26, 0) 100%);
+  }
+
+  .logos:after {
+    right: 0;
+    background: linear-gradient(270.00deg, rgb(16, 21, 26) 0%,rgba(16, 21, 26, 0) 100%);;
+  }
+
+  .sponsors-txt {
+    color: rgb(255, 255, 255);
+    font-family: 'Russo One';
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0px;
+    text-align: center;
+    width: 145px;
+    height: 36px;
+    float: left;
+    margin: 15px 20px 0px 40px;
+  }
+
+  .sponsors-txt-block {
+    width: auto;
+    height: 63px;
+    display: flex;
+    justify-content: center;
+    margin: 65px 0px 0px 0px;
+    
+  }
+
+  .sponsor-star-img {
+    width: 33px;
+    height: 25.38px;
+    float: left;
+  }
+
+  .logos-slideTwo {
+    display: inline-block;
+    animation: slide 105s linear infinite;
   }
 }
 </style>
