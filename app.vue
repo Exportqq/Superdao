@@ -523,10 +523,10 @@ export default {
         return null; // Или какое-то значение по умолчанию, например, `null`
     },
     infiniteLogos() {
-      return [...this.logos, ...this.logos, ...this.logos, ...this.logos, ...this.logos, ...this.logos, ...this.logos, ...this.logos, ...this.logos, ...this.logos];
+      return [...this.logos];
     },
     infiniteLogosTwo() {
-      return [...this.logosTwo, ...this.logosTwo, ...this.logosTwo, ...this.logosTwo, ...this.logosTwo, ...this.logosTwo, ...this.logosTwo, ...this.logosTwo, ...this.logosTwo, ...this.logosTwo];
+      return [...this.logosTwo];
     },
   },
   methods: {
