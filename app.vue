@@ -526,7 +526,7 @@ export default {
       return [...this.logos, ...this.logos, ...this.logos, ...this.logos, ...this.logos, ...this.logos, ...this.logos, ...this.logos, ...this.logos, ...this.logos];
     },
     infiniteLogosTwo() {
-      return [...this.logosTwo, ...this.logosTwo, ...this.logosTwo, ...this.logosTwo, ...this.logosTwo, ...this.logosTwo, ...this.logosTwo, ...this.logosTwo, ...this.logosTwo, ];
+      return [...this.logosTwo, ...this.logosTwo, ...this.logosTwo, ...this.logosTwo, ...this.logosTwo, ...this.logosTwo, ...this.logosTwo, ...this.logosTwo, ...this.logosTwo, ...this.logosTwo];
     },
   },
   methods: {
@@ -1296,7 +1296,7 @@ button {
 
 .logos-slideTwo {
   display: inline-block;
-  animation: slide 105s linear infinite;
+  animation: slide 115s linear infinite;
 }
 
 .logo {
@@ -2173,7 +2173,7 @@ button {
 
   .logos-slideTwo {
     display: inline-block;
-    animation: slide 105s linear infinite;
+    animation: slide 115s linear infinite;
   }
 }
 
@@ -3156,7 +3156,7 @@ button {
     height: 58px;
     overflow: hidden;
     position: relative;
-    margin: 16px 0px 0px 0px;
+    margin: 24px 0px 0px 0px;
   }
 
   .logos-slide {
@@ -3240,7 +3240,7 @@ button {
 
   .logos-slideTwo {
     display: inline-block;
-    animation: slide 105s linear infinite;
+    animation: slide 115s linear infinite;
   }
 }
 </style>
