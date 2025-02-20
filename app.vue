@@ -524,7 +524,7 @@ export default {
       return [...this.logos,...this.logos,...this.logos,...this.logos,...this.logos,...this.logos];
     },
     infiniteLogosTwo() {
-      return [...this.logosTwo,...this.logosTwo,...this.logosTwo,...this.logosTwo,...this.logosTwo,...this.logosTwo,];
+      return [...this.logosTwo,...this.logosTwo,...this.logosTwo,...this.logosTwo,...this.logosTwo,...this.logosTwo,,...this.logosTwo,];
     },
   },
   methods: {
