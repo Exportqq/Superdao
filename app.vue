@@ -489,20 +489,20 @@ export default {
         { label: 'App store', isActive: false }
       ],
       logos: [
-        '/alliance.svg',
-        '/digital.svg',
-        '/oneblock.svg',
-        '/fika.svg',
-        '/pear.svg',
-        '/shima.svg',
+        '/alliance.jpeg',
+        '/digital.jpeg',
+        '/oneblock.jpeg',
+        '/fika.jpeg',
+        '/pear.jpeg',
+        '/shima.jpeg',
       ],
       logosTwo: [
-        '/great.svg',
-        '/norwest.svg',
-        '/50.svg',
-        '/circle.svg',
-        '/protocol.svg',
-        '/venturesouq.svg',
+        '/great.jpeg',
+        '/norwest.jpeg',
+        '/50.jpeg',
+        '/circle.jpeg',
+        '/protocol.jpeg',
+        '/venturesouq.jpeg',
       ]
     }
   },
@@ -1090,6 +1090,7 @@ button {
 .devs-img {
   width: 160px;
   height: 160px;
+  border-radius: 42px;
 }
 
 .devs-nav-one {
@@ -1262,6 +1263,7 @@ button {
   height: 132px;
   width: auto;
   margin: 0 20px;
+  border-radius: 30px;
 }
 
 
@@ -1894,6 +1896,7 @@ button {
   .devs-img {
     width: 112px;
     height: 112px;
+    border-radius: 30px;
   }
 
   .devs-nav-one {
@@ -2067,6 +2070,7 @@ button {
     height: 88px;
     width: auto;
     margin: 0 12px;
+    border-radius: 20px;
   }
 
 
@@ -2960,6 +2964,7 @@ button {
   .devs-img {
     width: 112px;
     height: 112px;
+    border-radius: 33px;
   }
 
   .devs-nav-one {
@@ -3139,6 +3144,7 @@ button {
     height: 58px;
     width: auto;
     margin: 0 16px;
+    border-radius: 12px;
   }
 
 
