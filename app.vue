@@ -397,13 +397,13 @@
       </div>
       <div class="container-devs-two">
         <div class="devs-nav-one">
-          <img class="devs-img" src="public/dev1.svg">
-          <img class="devs-img" src="public/dev2.svg">
+          <img class="devs-img" src="public/dev1.jpeg">
+          <img class="devs-img" src="public/dev2.jpeg">
         </div>
         <div class="devs-nav-two">
-          <img class="devs-img" src="public/dev3.svg">
-          <img class="devs-img" src="public/dev4.svg">
-          <img class="devs-img" src="public/dev5.svg">
+          <img class="devs-img" src="public/dev3.jpeg">
+          <img class="devs-img" src="public/dev4.jpeg">
+          <img class="devs-img" src="public/dev5.jpeg">
         </div>
       </div>
       <div class="roles-navigation">
