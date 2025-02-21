@@ -461,12 +461,30 @@
           <div class="logos">
             <div class="logos-slideTwo">
               <!-- Используем вычисляемое свойство infiniteLogos для бесконечного списка -->
-              <img
-                v-for="(logo, index) in infiniteLogosTwo"
-                :key="index"
-                class="logos-img"
-                :src="logo"
-              />
+              <img class="logos-img" src="public/great.jpeg"/>
+              <img class="logos-img" src="public/norwest.jpeg"/>
+              <img class="logos-img" src="public/50.jpeg"/>
+              <img class="logos-img" src="public/circle.jpeg"/>
+              <img class="logos-img" src="public/protocol.jpeg"/>
+              <img class="logos-img" src="public/venturesouq.jpeg"/>
+              <img class="logos-img" src="public/great.jpeg"/>
+              <img class="logos-img" src="public/norwest.jpeg"/>
+              <img class="logos-img" src="public/50.jpeg"/>
+              <img class="logos-img" src="public/circle.jpeg"/>
+              <img class="logos-img" src="public/protocol.jpeg"/>
+              <img class="logos-img" src="public/venturesouq.jpeg"/>
+              <img class="logos-img" src="public/great.jpeg"/>
+              <img class="logos-img" src="public/norwest.jpeg"/>
+              <img class="logos-img" src="public/50.jpeg"/>
+              <img class="logos-img" src="public/circle.jpeg"/>
+              <img class="logos-img" src="public/protocol.jpeg"/>
+              <img class="logos-img" src="public/venturesouq.jpeg"/>
+              <img class="logos-img" src="public/great.jpeg"/>
+              <img class="logos-img" src="public/norwest.jpeg"/>
+              <img class="logos-img" src="public/50.jpeg"/>
+              <img class="logos-img" src="public/circle.jpeg"/>
+              <img class="logos-img" src="public/protocol.jpeg"/>
+              <img class="logos-img" src="public/venturesouq.jpeg"/>
             </div>
           </div>
         </div>
@@ -496,14 +514,6 @@ export default {
         '/pear.jpeg',
         '/shima.jpeg',
       ],
-      logosTwo: [
-        '/great.jpeg',
-        '/norwest.jpeg',
-        '/50.jpeg',
-        '/circle.jpeg',
-        '/protocol.jpeg',
-        '/venturesouq.jpeg',
-      ]
     }
   },
   computed: {
@@ -522,9 +532,6 @@ export default {
     },
     infiniteLogos() {
       return [...this.logos,...this.logos,...this.logos,...this.logos,...this.logos,...this.logos];
-    },
-    infiniteLogosTwo() {
-      return [...this.logosTwo,...this.logosTwo,...this.logosTwo,...this.logosTwo,...this.logosTwo,...this.logosTwo,,...this.logosTwo,];
     },
   },
   methods: {
