@@ -461,30 +461,125 @@
           <div class="logos">
             <div class="logos-slideTwo">
               <!-- Используем вычисляемое свойство infiniteLogos для бесконечного списка -->
-              <img class="logos-img" src="public/great.jpeg"/>
-              <img class="logos-img" src="public/norwest.jpeg"/>
-              <img class="logos-img" src="public/50.jpeg"/>
-              <img class="logos-img" src="public/circle.jpeg"/>
-              <img class="logos-img" src="public/protocol.jpeg"/>
-              <img class="logos-img" src="public/venturesouq.jpeg"/>
-              <img class="logos-img" src="public/great.jpeg"/>
-              <img class="logos-img" src="public/norwest.jpeg"/>
-              <img class="logos-img" src="public/50.jpeg"/>
-              <img class="logos-img" src="public/circle.jpeg"/>
-              <img class="logos-img" src="public/protocol.jpeg"/>
-              <img class="logos-img" src="public/venturesouq.jpeg"/>
-              <img class="logos-img" src="public/great.jpeg"/>
-              <img class="logos-img" src="public/norwest.jpeg"/>
-              <img class="logos-img" src="public/50.jpeg"/>
-              <img class="logos-img" src="public/circle.jpeg"/>
-              <img class="logos-img" src="public/protocol.jpeg"/>
-              <img class="logos-img" src="public/venturesouq.jpeg"/>
-              <img class="logos-img" src="public/great.jpeg"/>
-              <img class="logos-img" src="public/norwest.jpeg"/>
-              <img class="logos-img" src="public/50.jpeg"/>
-              <img class="logos-img" src="public/circle.jpeg"/>
-              <img class="logos-img" src="public/protocol.jpeg"/>
-              <img class="logos-img" src="public/venturesouq.jpeg"/>
+              <img
+                v-for="(logo, index) in infiniteLogosTwo"
+                :key="index"
+                class="logos-img"
+                :src="logo"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="press-block">
+        <div class="press-block-settings">
+          <div class="press-txt-block-settings">
+            <p class="press-txt">Press</p>
+            <img class="press-img" src="public/press_star.svg">
+          </div>
+          <buton class="press-btn">
+            <p class="press-btn-txt">See all</p>
+            <img class="press_arrow" src="public/press_arrow.svg">
+          </buton>
+        </div>
+      </div>
+      <div class="press-cads-block">
+        <div class="press-card-blue">
+          <div style="height: auto;">
+            <img class="logo-img" src="public/decrypt.svg">
+            <p class="card-txt">Superdao Raises $10.5 Million to Build an 'All-in-One' DAO Platform</p>
+            <p class="card-txt-comment">Superdao aims to make it easier for online communities to build and launch DAOs</p>
+            <button class="press-cards-btn-read">
+              <p class="press-cards-btn-read-txt">Read</p>
+              <img class="press-cards-img-read" src="public/black_arrow.svg">
+            </button>
+          </div>
+        </div>
+        <div class="press-card-viol">
+          <div style="height: auto;">
+            <img class="logo-img" src="public/blockworks.svg">
+            <p class="card-txt">The Y Combinator of Web3 Attracts Record Number of DAO Startups</p>
+            <p class="card-txt-comment">DAOs and related startups made up an “overwhelming number of applicants” for a Web3 accelerator’s cohort this year</p>
+            <button class="press-cards-btn-read">
+              <p class="press-cards-btn-read-txt">Read</p>
+              <img class="press-cards-img-read" src="public/black_arrow.svg">
+            </button>
+          </div>
+        </div>
+        <div class="press-card-yellow">
+          <div style="height: auto;">
+            <img class="logo-img" src="public/techcrunch.svg">
+            <p class="card-txt">VC-backed DAO startups are racing to define what DAOs actually are</p>
+            <p class="card-txt-comment">Not all 'decentralized autonomous organizations' are autonomous... or decentralized</p>
+            <button class="press-cards-btn-read">
+              <p class="press-cards-btn-read-txt">Read</p>
+              <img class="press-cards-img-read" src="public/black_arrow.svg">
+            </button>
+          </div>
+        </div>
+        <buton class="press-btn-xs">
+          <p class="press-btn-txt">See all</p>
+          <img class="press_arrow" src="public/press_arrow.svg">
+        </buton>
+      </div>
+
+
+
+      <div class="podcasts-block">
+        <div class="podcast-star">
+          <img class="podcast-star-img" src="public/podcasts_star.svg">
+        </div>
+        <div>
+          <div >
+            <div class="press-block-settings">
+              <div class="press-txt-block-settings">
+                <p class="press-txt">Podсasts</p>
+              </div>
+              <buton class="press-btn">
+                <p class="press-btn-txt">See all</p>
+                <img class="press_arrow" src="public/press_arrow.svg">
+              </buton>
+            </div>
+            <div class="press-cads-block">
+              <div class="press-card">
+                <div style="height: auto;">
+                  <img class="podcast-img" src="public/podcast1.svg">
+                  <p class="podcast-txt">Understanding DAOs with Yury Lifshits</p>
+                  <p class="podcast-txt-comment">The Pomp Podcast by Anthony Pompliano</p>
+                  <button class="press-cards-btn-read">
+                    <p class="podcast-cards-btn-read-txt">Listen</p>
+                    <img class="press-cards-img-read" src="public/podcast_arrow.svg">
+                  </button>
+                </div>
+              </div>
+              <div class="press-card">
+                <div style="height: auto;">
+                  <img class="podcast-img" src="public/podcast2.svg">
+                  <p class="podcast-txt">Everything You Need to Know About DAOs with Yury Lifshits from Superdao</p>
+                  <p class="podcast-txt-comment">The Unstoppable Podcast by Josh Gordon</p>
+                  <button class="press-cards-btn-read">
+                    <p class="podcast-cards-btn-read-txt">Watch</p>
+                    <img class="press-cards-img-read" src="public/podcast_arrow.svg">
+                  </button>
+                </div>
+              </div>
+              <div class="press-card">
+                <div style="height: auto;">
+                  <img class="podcast-img" src="public/podcast3.svg">
+                  <p class="podcast-txt">Yury Lifshits - Superdao: The “Shopify” for DAOs</p>
+                  <p class="podcast-txt-comment">Zima Red by Andrew Stainwold</p>
+                  <button class="press-cards-btn-read">
+                    <p class="podcast-cards-btn-read-txt">Listen</p>
+                    <img class="podcast-cards-img-read" src="public/podcast_arrow.svg">
+                  </button>
+                </div>
+              </div>
+              <buton class="press-btn-xs">
+                <p class="press-btn-txt">See all</p>
+                <img class="press_arrow" src="public/press_arrow.svg">
+              </buton>
             </div>
           </div>
         </div>
@@ -514,6 +609,14 @@ export default {
         '/pear.jpeg',
         '/shima.jpeg',
       ],
+      logosTwo: [
+        '/great.jpeg',
+        '/norwest.jpeg',
+        '/50.jpeg',
+        '/circle.jpeg',
+        '/protocol.jpeg',
+        '/venturesouq.jpeg',
+      ]
     }
   },
   computed: {
@@ -532,6 +635,9 @@ export default {
     },
     infiniteLogos() {
       return [...this.logos,...this.logos,...this.logos,...this.logos,...this.logos,...this.logos];
+    },
+    infiniteLogosTwo() {
+      return [...this.logosTwo,...this.logosTwo,...this.logosTwo,...this.logosTwo,...this.logosTwo,...this.logosTwo,,...this.logosTwo,];
     },
   },
   methods: {
@@ -567,6 +673,7 @@ export default {
   }
 }
 </script>
+
 
 <style>
 * {
@@ -1379,6 +1486,271 @@ button {
   height: 50px;
   float: left;
 }
+
+.press-block {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin: 163px 0px 0px 0px;
+}
+
+.press-block-settings {
+  width: 1139px;
+  height: 117px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.press-txt {
+  color: rgb(229, 229, 229);
+  font-family: 'Russo One';
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 80px;
+  letter-spacing: 0px;
+  text-align: left;
+  width: 158px;
+  height: 80px;
+  float: left;
+  margin: 37px 35px 0px 0px;
+}
+
+.press-txt-block-settings {
+  height: 117px;
+}
+
+.press-img {
+  width: 58px;
+  height: 59px;
+  float: left;
+}
+
+.press-btn-txt {
+  color: rgb(131, 149, 167);
+  font-family: 'Montserrat';
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 0px;
+  width: 75px;
+  height: 40px;
+}
+
+.press_arrow {
+  width: 15px;
+  height: 11.67px;
+  margin: 0px 0px 0px 10px;
+}
+
+.press-btn {
+  width: 100px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  transition: 1s;
+  position: relative; /* Для позиционирования псевдоэлемента */
+}
+
+
+.press-btn:hover::after {
+  width: 100%; /* Полная ширина при наведении */
+}
+
+.press-btn::after {
+  content: '';
+  position: absolute;
+  left: 0; /* Начинаем с левого края */
+  bottom: 5px; /* Отступ как в text-underline-offset */
+  width: 0; /* Начальная ширина */
+  height: 2px; /* Толщина линии */
+  background: rgb(131, 149, 167); /* Цвет линии */
+  transition: width 0.3s ease; /* Анимация расширения */
+}
+
+.press-cads-block {
+  display: flex;
+  justify-content: center;
+  margin: 32px 0px 0px 0px;
+  height: auto;
+  gap: 28px;
+}
+
+.press-card-blue {
+  width: 361px;
+  height: 382px;
+  border-radius: 20px;
+  background: rgb(119, 230, 255);
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.press-card-viol {
+  width: 361px;
+  height: 382px;
+  border-radius: 20px;
+  background: #E2C1F9;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.press-card-yellow {
+  width: 361px;
+  height: 382px;
+  border-radius: 20px;
+  background: #DBE268;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-img {
+  width: 120px;
+  height: 39.92px;
+}
+
+.card-txt {
+  color: rgb(16, 21, 26);
+  font-family: 'Montserrat';
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0px;
+  text-align: left;
+  width: 305px;
+  height: 90px;
+  margin: 20px 0px 12px 0px;
+}
+
+.card-txt-comment {
+  color: rgb(16, 21, 26);
+  font-family: 'Montserrat';
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: 0px;
+  text-align: left;
+  width: 305px;
+  height: 116px;
+  margin: 0px 0px 20px 0px;
+}
+
+.press-cards-btn-read {
+  display: flex;
+  height: auto;
+  align-items: center;
+  padding: 0px;
+}
+
+.press-cards-btn-read-txt {
+  width: 43px;
+  height: 20px;
+  color: rgb(16, 21, 26);
+  font-family: 'Montserrat';
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: left;
+  float: left;
+}
+
+.press-cards-img-read {
+  width: 13px;
+  height: 12px;
+  float: left;
+  margin: 0px 0px 0px 8px;
+}
+
+.press-btn-xs {
+  display: none;
+}
+
+.podcast-star-img {
+  width: 61px;
+  height: 54.17px;
+}
+
+.podcast-star {
+  float: left;
+  height: auto;
+  margin: 0px 85px 0px 0px;
+}
+
+.press-card {
+  box-sizing: border-box;
+  border: 2px solid rgb(42, 55, 68);
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+  background: rgb(18, 30, 40);
+  width: 361px;
+  height: 334px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.podcast-img {
+  width: 50px;
+  height: 50px;
+}
+
+.podcast-txt {
+  color: rgb(255, 255, 255);
+  font-family: 'Montserrat';
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0px;
+  text-align: left;
+  width: 301px;
+  height: 84px;
+  margin: 21px 0px 18px 0px;
+}
+
+.podcast-txt-comment {
+  color: rgb(226, 226, 226);
+  font-family: 'Montserrat';
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 21px;
+  letter-spacing: 0px;
+  text-align: left;
+  opacity: 0.8;
+  height: 47px;
+  width: 301px;
+  margin: 0px 0px 34px 0px;
+}
+
+.podcast-cards-btn-read-txt {
+  color: rgb(255, 255, 255);
+  font-family: 'Montserrat';
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+  width: 55px;
+  height: 19px;
+}
+
+.podcast-cards-img-read {
+  width: 13px;
+  height: 10px;
+}
+
+.podcasts-block {
+  display: flex;
+  height: 484px;
+  margin: 168px 148px 0px 0px;
+  justify-content: center;
+}
 @media (min-width: 769px) and (max-width: 1260px) {
   * {
     margin: 0px;
@@ -2185,6 +2557,190 @@ button {
   .logos-slideTwo {
     display: inline-block;
     animation: slide 115s linear infinite;
+  }
+
+  .press-block {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin: 69px 0px 0px 0px;
+  }
+
+  .press-block-settings {
+    width: 735px;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .press-txt {
+    color: rgb(255, 255, 255);
+    font-family: 'Russo One';
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 43px;
+    letter-spacing: 0px;
+    text-align: left;
+    width: 105px;
+    height: 43px;
+    float: left;
+    margin: 30px 21px 0px 0px;
+  }
+
+  .press-txt-block-settings {
+    height: 73px;
+  }
+
+  .press-img {
+    width: 45px;
+    height: 45.78px;
+    float: left;
+  }
+
+  .press-btn-txt {
+    color: rgb(131, 149, 167);
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0px;
+    width: 62px;
+    height: 32px;
+  }
+
+  .press_arrow {
+    width: 13px;
+    height: 10px;
+    margin: 0px 0px 0px 8px;
+  }
+
+  .press-btn {
+    width: 83px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    transition: 1s;
+    position: relative; /* Для позиционирования псевдоэлемента */
+  }
+
+
+  .press-btn:hover::after {
+    width: 100%; /* Полная ширина при наведении */
+  }
+
+  .press-btn::after {
+    content: '';
+    position: absolute;
+    left: 0; /* Начинаем с левого края */
+    bottom: 2px; /* Отступ как в text-underline-offset */
+    width: 0; /* Начальная ширина */
+    height: 2px; /* Толщина линии */
+    background: rgb(131, 149, 167); /* Цвет линии */
+    transition: width 0.3s ease; /* Анимация расширения */
+  }
+
+  .press-cads-block {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0px 0px 0px;
+    height: auto;
+    gap: 20px;
+  }
+
+  .press-card-blue {
+    width: 232px;
+    height: 335px;
+    border-radius: 20px;
+    background: rgb(119, 230, 255);
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .press-card-viol {
+    width: 232px;
+    height: 335px;
+    border-radius: 20px;
+    background: #E2C1F9;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .press-card-yellow {
+    width: 232px;
+    height: 335px;
+    border-radius: 20px;
+    background: #DBE268;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-img {
+    width: 91px;
+    height: 30.28px;
+  }
+
+  .card-txt {
+    color: rgb(16, 21, 26);
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+    width: 192px;
+    height: 96px;
+    margin: 12px 0px 8px 0px;
+  }
+
+  .card-txt-comment {
+    color: rgb(16, 21, 26);
+    font-family: 'Montserrat';
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0px;
+    text-align: left;
+    width: 192px;
+    height: 110px;
+    margin: 0px 0px 16px 0px;
+  }
+
+  .press-cards-btn-read {
+    display: flex;
+    height: auto;
+    align-items: center;
+    padding: 0px;
+  }
+
+  .press-cards-btn-read-txt {
+    width: 33px;
+    height: 15px;
+    color: rgb(16, 21, 26);
+    font-family: 'Montserrat';
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0%;
+    text-align: left;
+    float: left;
+  }
+
+  .press-cards-img-read {
+    width: 10px;
+    height: 7.5px;
+    float: left;
+    margin: 0px 0px 0px 6px;
+  }
+
+  .press-btn-xs {
+    display: none;
   }
 }
 
@@ -3259,6 +3815,192 @@ button {
   .logos-slideTwo {
     display: inline-block;
     animation: slide 115s linear infinite;
+  }
+
+  .press-block {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin: 64px 0px 0px 0px;
+  }
+
+  .press-block-settings {
+    width: 735px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .press-txt {
+    color: rgb(255, 255, 255);
+    font-family: 'Russo One';
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0px;
+    text-align: center;
+    width: 82px;
+    height: 36px;
+    float: left;
+    margin: 16px 8px 0px 16px;
+  }
+
+  .press-txt-block-settings {
+    height: 52px;
+  }
+
+  .press-img {
+    width: 31.84px;
+    height: 32.39px;
+    float: left;
+  }
+
+  .press-btn-txt {
+    color: rgb(131, 149, 167);
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0px;
+    width: 62px;
+    height: 32px;
+  }
+
+  .press_arrow {
+    width: 13px;
+    height: 10px;
+    margin: 0px 0px 0px 8px;
+  }
+
+  .press-btn {
+    width: 83px;
+    height: 32px;
+    display: none;
+    align-items: center;
+    transition: 1s;
+    position: relative; /* Для позиционирования псевдоэлемента */
+  }
+
+
+  .press-btn:hover::after {
+    width: 100%; /* Полная ширина при наведении */
+  }
+
+  .press-btn::after {
+    content: '';
+    position: absolute;
+    left: 0; /* Начинаем с левого края */
+    bottom: 2px; /* Отступ как в text-underline-offset */
+    width: 0; /* Начальная ширина */
+    height: 2px; /* Толщина линии */
+    background: rgb(131, 149, 167); /* Цвет линии */
+    transition: width 0.3s ease; /* Анимация расширения */
+  }
+
+  .press-cads-block {
+    display: flex;
+    margin: 24px 0px 0px 0px;
+    height: auto;
+    gap: 16px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .press-card-blue {
+    width: 328px;
+    height: 262px;
+    border-radius: 20px;
+    background: rgb(119, 230, 255);
+    float: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .press-card-viol {
+    width: 328px;
+    height: 262px;
+    border-radius: 20px;
+    background: #E2C1F9;
+    float: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .press-card-yellow {
+    width: 328px;
+    height: 262px;
+    border-radius: 20px;
+    background: #DBE268;
+    float: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-img {
+    width: 105px;
+    height: 34.93px;
+  }
+
+  .card-txt {
+    color: rgb(16, 21, 26);
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+    width: 288px;
+    height: 72px;
+    margin: 12px 0px 8px 0px;
+  }
+
+  .card-txt-comment {
+    color: rgb(16, 21, 26);
+    font-family: 'Montserrat';
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0px;
+    text-align: left;
+    width: 288px;
+    height: 66px;
+    margin: 0px 0px 19px 0px;
+  }
+
+  .press-cards-btn-read {
+    display: flex;
+    height: auto;
+    align-items: center;
+    padding: 0px;
+  }
+
+  .press-cards-btn-read-txt {
+    width: 38px;
+    color: rgb(16, 21, 26);
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0%;
+    text-align: left;
+    float: left;
+  }
+
+  .press-cards-img-read {
+    width: 11.05px;
+    height: 8.5px;
+    float: left;
+    margin: 0px 0px 0px 6px;
+  }
+
+  .press-btn-xs {
+    display: flex;
+    align-items: center;
+    margin: 40px 0px 0px 0px;
   }
 }
 </style>
