@@ -528,13 +528,19 @@
 
 
       <div class="podcasts-block">
-        <div class="podcast-star">
+        <div v-if="isDesktop" class="podcast-star">
           <img class="podcast-star-img" src="public/podcasts_star.svg">
         </div>
         <div>
           <div >
             <div class="press-block-settings">
-              <div class="press-txt-block-settings">
+              <div v-if="isPhone" class="podcast-star">
+                <img class="podcast-star-img" src="public/podcasts_star.svg">
+              </div>
+              <div v-if="isPhone" class="press-txt-block-settings">
+                <p class="podc-txt">Podсasts</p>
+              </div>
+              <div v-if="isDesktop" class="press-txt-block-settings">
                 <p class="press-txt">Podсasts</p>
               </div>
               <buton class="press-btn">
@@ -2803,23 +2809,23 @@ button {
   .podcast-cards-btn-read-txt {
     color: rgb(255, 255, 255);
     font-family: 'Montserrat';
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 700;
-    line-height: 20px;
+    line-height: 15px;
     letter-spacing: 0px;
     text-align: left;
-    width: 55px;
-    height: 19px;
+    width: 42px;
+    height: 15px;
   }
 
   .podcast-cards-img-read {
-    width: 13px;
-    height: 10px;
+    width: 10px;
+    height: 7.5px;
   }
 
   .podcasts-block {
     display: flex;
-    height: 390px;
+    height: 368px;
     margin: 88px 70px 0px 0px;
     justify-content: center;
   }
@@ -3427,6 +3433,8 @@ button {
     letter-spacing: 0px;
     text-align: center;
     transition: color 0.3s ease;
+    height: auto;
+    width: 100%;
   }
 
   #nftMembershipBtn {
@@ -3552,6 +3560,9 @@ button {
     background: rgb(18, 30, 40);
     width: 100px;
     height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .blockchain-img {
@@ -3905,11 +3916,11 @@ button {
   }
 
   .press-block-settings {
-    width: 735px;
+    width: 100%;
     height: 52px;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
   }
 
   .press-txt {
@@ -4081,6 +4092,102 @@ button {
     display: flex;
     align-items: center;
     margin: 40px 0px 0px 0px;
+  }
+
+  .podcast-star-img {
+    width: 32px;
+    height: 28.42px;
+  }
+
+  .podcast-star {
+    float: left;
+    height: auto;
+    margin: 0px 20px 0px 0px;
+  }
+
+  .press-card {
+    box-sizing: border-box;
+    border: 2px solid rgb(42, 55, 68);
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    background: rgb(18, 30, 40);
+    width: 328px;
+    height: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .podcast-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .podcast-txt {
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat';
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+    width: 288px;
+    height: 72px;
+    margin: 16px 0px 12px 0px;
+  }
+
+  .podcast-txt-comment {
+    color: rgb(226, 226, 226);
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+    opacity: 0.8;
+    height: 44px;
+    width: 288px;
+    margin: 0px 0px 17px 0px;
+  }
+
+  .podcast-cards-btn-read-txt {
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat';
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0px;
+    text-align: left;
+    width: 42px;
+    height: 15px;
+  }
+
+  .podcast-cards-img-read {
+    width: 10px;
+    height: 7.5px;
+  }
+
+  .podcasts-block {
+    display: flex;
+    height: 390px;
+    width: 100%;
+    margin: 88px 70px 0px 0px;
+    justify-content: center;
+  }
+
+  .podc-txt {
+    color: rgb(255, 255, 255);
+    font-family: 'Russo One';
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0px;
+    text-align: center;
+    width: 133px;
+    height: 36px;
+    float: left;
+    margin: 9px 40px 0px 0px;
   }
 }
 </style>
