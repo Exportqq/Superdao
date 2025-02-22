@@ -1679,7 +1679,7 @@ button {
 .podcast-star {
   float: left;
   height: auto;
-  margin: 0px 85px 0px 0px;
+  margin: 0px 32px 0px 0px;
 }
 
 .press-card {
@@ -1748,7 +1748,7 @@ button {
 .podcasts-block {
   display: flex;
   height: 484px;
-  margin: 168px 148px 0px 0px;
+  margin: 168px 100px 0px 0px;
   justify-content: center;
 }
 @media (min-width: 769px) and (max-width: 1260px) {
@@ -2742,6 +2742,87 @@ button {
   .press-btn-xs {
     display: none;
   }
+
+  .podcast-star-img {
+    width: 44px;
+    height: 39.07px;
+  }
+
+  .podcast-star {
+    float: left;
+    height: auto;
+    margin: 0px 29px 0px 0px;
+  }
+
+  .press-card {
+    box-sizing: border-box;
+    border: 2px solid rgb(42, 55, 68);
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    background: rgb(18, 30, 40);
+    width: 232px;
+    height: 284px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .podcast-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .podcast-txt {
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat';
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+    width: 192px;
+    height: 96px;
+    margin: 16px 0px 12px 0px;
+  }
+
+  .podcast-txt-comment {
+    color: rgb(226, 226, 226);
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+    opacity: 0.8;
+    height: 44px;
+    width: 192px;
+    margin: 0px 0px 17px 0px;
+  }
+
+  .podcast-cards-btn-read-txt {
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+    width: 55px;
+    height: 19px;
+  }
+
+  .podcast-cards-img-read {
+    width: 13px;
+    height: 10px;
+  }
+
+  .podcasts-block {
+    display: flex;
+    height: 390px;
+    margin: 88px 70px 0px 0px;
+    justify-content: center;
+  }
 }
 
 @media (min-width: 360px) and (max-width: 768px) {
@@ -2774,7 +2855,6 @@ button {
 
   .backround {
     width: 100%;
-    height: 5695px;
     background-image: url(public/back768.svg);
     background-position: center; /* Фиксирует изображение по центру */
     background-size: cover; /* Масштабирует изображение так, чтобы оно покрывало всю область, обрезая лишнее */
